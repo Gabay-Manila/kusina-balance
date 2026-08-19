@@ -117,24 +117,26 @@
 <body class="antialiased min-h-screen pb-28 select-none">
 
   <!-- Header -->
-  <header class="sticky top-0 z-30 bg-[#FAF8F5] px-4 py-3 border-b border-[#DDD6C6] shadow-sm flex items-center justify-between">
-    <div>
-      <div class="flex items-center space-x-1.5">
-        <span class="font-mincho text-lg font-bold tracking-tight text-[#2B2926]">KusinaBalance</span>
-        <span class="text-[10px] font-mincho px-1.5 py-0.5 rounded border border-[#E0B23A] text-[#8C6A1D]" data-i18n="appSubtitle">生活献立帳</span>
+  <header class="sticky top-0 z-30 bg-[#FAF8F5] px-4 py-3 border-b border-[#DDD6C6] shadow-sm">
+    <div class="max-w-md mx-auto flex items-center justify-between">
+      <div>
+        <div class="flex items-center space-x-1.5">
+          <span class="font-mincho text-lg font-bold tracking-tight text-[#2B2926]">KusinaBalance</span>
+          <span class="text-[10px] font-mincho px-1.5 py-0.5 rounded border border-[#E0B23A] text-[#8C6A1D]" data-i18n="appSubtitle">生活献立帳</span>
+        </div>
+        <p class="text-[11px] text-[#2B2926]/70" data-i18n="tagline">マニラ・ローカル食材で整える健康食</p>
       </div>
-      <p class="text-[11px] text-[#2B2926]/70" data-i18n="tagline">マニラ・ローカル食材で整える健康食</p>
-    </div>
 
-    <div class="flex items-center space-x-2">
-      <button onclick="playAudioTone(); toggleLang();" class="btn-ghost px-2.5 py-1.5 rounded-lg flex items-center space-x-1 text-xs active:scale-95 transition">
-        <i data-lucide="languages" class="w-3.5 h-3.5"></i>
-        <span class="font-mincho" id="lang-toggle-label">English</span>
-      </button>
-      <button onclick="playAudioTone(); randomizeAll();" class="btn-ghost px-3 py-1.5 rounded-lg flex items-center space-x-1.5 text-xs active:scale-95 transition">
-        <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
-        <span class="font-mincho" data-i18n="bulkGenerate">一括生成</span>
-      </button>
+      <div class="flex items-center space-x-2">
+        <button onclick="playAudioTone(); toggleLang();" class="btn-ghost px-2.5 py-1.5 rounded-lg flex items-center space-x-1 text-xs active:scale-95 transition">
+          <i data-lucide="languages" class="w-3.5 h-3.5"></i>
+          <span class="font-mincho" id="lang-toggle-label">English</span>
+        </button>
+        <button onclick="playAudioTone(); randomizeAll();" class="btn-ghost px-3 py-1.5 rounded-lg flex items-center space-x-1.5 text-xs active:scale-95 transition">
+          <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+          <span class="font-mincho" data-i18n="bulkGenerate">一括生成</span>
+        </button>
+      </div>
     </div>
   </header>
 
