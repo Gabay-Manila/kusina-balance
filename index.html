@@ -1,0 +1,1561 @@
+<!DOCTYPE html>
+<html lang="ja" class="theme-guide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>KusinaBalance — 生活献立帳</title>
+  
+  <!-- PWA Settings -->
+  <meta name="theme-color" content="#EFEAE0">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Kusina">
+  <link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAYAAAA9zQYyAAAF+klEQVR4nO3d4XHbOhBFYciTElJA6nALnkk7riHteCYtpA4X4B78fjjMk2lKIkUsce/u+QpgMODREpIt59QEvL48vo9eA/b78fPPafQahiyAgGsYEfhh/yAR13ZU3KH/CBFjSWTcIRcmZKwREfZD7wsSM9aKaKXbK4SQsUevad1lQhMz9urV0K5XBSEjwp5pffeEJmZE2dPWXUETM6Ld29jmoIkZR7mntU1BEzOOtrW51UETM0bZ0t6qoIkZo61t8GbQxAwVa1rs/qNvYKSrQTOdoeZWkxeDJmaoutYmRw6kshh0pen89Pxme/3otSu71OiXXwKpHPPvX99trh+9dhfzX2TiyHHm6fktfKJGXT967S4+BV15Ok96TbrI60ev3cm82ZITmnNzXiWDviR6wkVev+J0XvIv6CrHDY4a+Zy3y4TuiOPAeKWCHjXhmM7HeWitznEjEsGNNTVcakIvcQ7Oee1RygQ94nwb/UYTX5UJGjU8VD4/Oz+yndce5fXl8Z0J3QFHAh0EjVQIuoPfv75/OQJwJBiDoDtY+tVNjiFjEDRSIegOOF7oIGikUiZo5ynqvPajlQl6ifMbN+e1RyoddDSiO175oJ2jc157lPJB93LpnEt0xyoV9KjoelyfF8w6pYKOxqcR45ULOnrSRV6fKX1buaCvcTh6jLi2k5JBO3zLe8S1MygZdGscPbIqG/Q1zmE4r72H0kGPOnpETunqSgfdmvfj23ntUcoHfY3zebdq1ATdvB/fzmuPQNB/OX8qwdHjfwQ9WMXoIhH0GedPJZjSHwj6QEQXj6BnnN9kOa+9F4JeKfoNXKRKTwCCRioEvcD50e289h4IWkSlY0EkgkYqBD3A0p/erX5U6IWgB1j607scOfogaKRC0CI4cvRB0AucH//Oa++BoJEKQa/k/L/CVjrOEPSM8yPbee29EPSBLgVXaYJGI+gzkcGN+lJstRcLQQ9WLbhoBP3XiOkc/Uaz4ouFoJv3mynntUcg6CscpvMlFadzawRt/bh2XnuU0+vL4/voRSiYx9E7ivPrR1474vpOCHrm6fktNIjI60ev3QFBI5XyZ2jkQtBIhaCRCkEjlW+jF6DI5adv1T/RWJL6Uw6XMI+W+YVgGzSxxnKN3iJo4tXgELlk0ATsQTFwqaAJ2ZNS2DIf2xGzL6V7JxM00INM0EqPLWyjdO+kztATpUcYLlMKeSIZ9ByBa1AMeM4i6CVEHssh3iW2Qc8R+D6uAc/ZB03IfbmHbRs0IcdyDVvmY7stiDme6x5bTWjXTXbnNK1tJjQxj+O09xZBO21oVi73QD5ol42swOFeSAftsIHVqN8T2aDVN64y5XsjGbTyhuGD6j2SC1p1o/CV4r2SCxrYQypoxVc8rlO7Z1JBA3sRNFKRCVrt0YX1lO6dTNBADwSNVAgaqRA0UiFopELQSEUmaKev+eAzpXsnEzTQA0EjFamglR5dWEftnkkFDewlF7TaKx6XKd4ruaBb09wofKZ6jySDbk13w6B9b2SDbk1746pSvyfSQbemv4GVONwL+aBb89jI7FzugUXQrflsaEZOe2/153QnSl/5ycwp5InNhD7nuNFuXPfYckKfY1r35RryxD7oCWHv4x7yJE3QE8LeJkvIk3RBTwj7umwhT9IGPSHsz7KGPEkf9LmqcWeP+FypoOeyBl4p4LnSQc+5Bl454DmCvkEtcuK97tRaa0R9n6jYifY+P37+OX0bvQhnhKfH8nc5gEsIGqk8tPZx9hi9EGCPqWEmNFIhaKTyL2iOHXB13i4TGqkQNFL5FDTHDriZN8uERipfgmZKw8VSq4sTmqih7lKjHDmQysWgmdJQda3NqxOaqKHmVpMcOZDKzaCZ0lCxpsVVE5qoMdraBlcfOYgao2xpb9MZmqhxtK3NbX5TSNQ4yj2t3fUpB1Ej2r2N3f2xHVEjyp62ukTJH6pBDz2GZJcfrDCtsVevhrqHyLTGFr2HYfcffTOtsVZEK6HxMa2xJHLoHTZNibu2o57cQ44HxF3DiOOnxHmXwHNQeP/0HxugmabBUQc6AAAAAElFTkSuQmCC">
+  
+  <!-- Google Fonts: Shippori Mincho & Zen Kaku Gothic New -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <style>
+    :root {
+      /* 共通ベース（墨×クリーム） */
+      --ink: #2B2926;
+      --cream: #EFEAE0;
+      --cream-deep: #E4DECE;
+      --stone: #C9C2B4;
+      --stone-line: #DDD6C6;
+
+      /* 案内・生活ガイド系（バナナ） */
+      --accent-fill: #E0B23A;
+      --accent-text: #8C6A1D;
+    }
+
+    body {
+      background-color: var(--cream);
+      color: var(--ink);
+      font-family: 'Zen Kaku Gothic New', sans-serif;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .font-mincho {
+      font-family: 'Shippori Mincho', serif;
+    }
+
+    /* 共通コンポーネント仕様 */
+    .btn-primary {
+      background-color: var(--accent-fill);
+      color: var(--cream);
+      font-weight: 700;
+      min-height: 44px;
+      min-width: 44px;
+    }
+    .btn-primary:active {
+      opacity: 0.9;
+    }
+
+    .btn-ghost {
+      background-color: transparent;
+      border: 1.5px solid var(--accent-fill);
+      color: var(--accent-text);
+      font-weight: 700;
+      min-height: 40px;
+    }
+
+    .card-base {
+      background-color: #FAF8F5;
+      border: 1px solid var(--stone-line);
+    }
+
+    .card-deep {
+      background-color: var(--cream-deep);
+      border: 1px solid var(--stone-line);
+    }
+
+    .chip-accent {
+      border: 1px solid var(--accent-fill);
+      color: var(--accent-text);
+      background-color: #FAF8F5;
+    }
+
+    .badge-accent {
+      border: 1.5px solid var(--accent-fill);
+      color: var(--accent-text);
+    }
+
+    .tab-item {
+      border-bottom: 2px solid transparent;
+      color: var(--stone);
+    }
+    .tab-item.active {
+      border-bottom: 2px solid var(--accent-fill);
+      color: var(--accent-text);
+      font-weight: 700;
+    }
+
+    .progress-track {
+      background-color: var(--stone);
+    }
+    .progress-fill {
+      background-color: var(--accent-fill);
+    }
+
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+<body class="antialiased min-h-screen pb-28 select-none">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-30 bg-[#FAF8F5] px-4 py-3 border-b border-[#DDD6C6] shadow-sm flex items-center justify-between">
+    <div>
+      <div class="flex items-center space-x-1.5">
+        <span class="font-mincho text-lg font-bold tracking-tight text-[#2B2926]">KusinaBalance</span>
+        <span class="text-[10px] font-mincho px-1.5 py-0.5 rounded border border-[#E0B23A] text-[#8C6A1D]" data-i18n="appSubtitle">生活献立帳</span>
+      </div>
+      <p class="text-[11px] text-[#2B2926]/70" data-i18n="tagline">マニラ・ローカル食材で整える健康食</p>
+    </div>
+
+    <div class="flex items-center space-x-2">
+      <button onclick="playAudioTone(); toggleLang();" class="btn-ghost px-2.5 py-1.5 rounded-lg flex items-center space-x-1 text-xs active:scale-95 transition">
+        <i data-lucide="languages" class="w-3.5 h-3.5"></i>
+        <span class="font-mincho" id="lang-toggle-label">English</span>
+      </button>
+      <button onclick="playAudioTone(); randomizeAll();" class="btn-ghost px-3 py-1.5 rounded-lg flex items-center space-x-1.5 text-xs active:scale-95 transition">
+        <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+        <span class="font-mincho" data-i18n="bulkGenerate">一括生成</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Container (1-2 Scrolls max on mobile) -->
+  <main class="max-w-md mx-auto p-3.5 space-y-3.5">
+
+    <!-- Top Summary Banner -->
+    <div onclick="playAudioTone(); switchTab('settings');" class="card-deep rounded-xl p-3.5 flex items-center justify-between cursor-pointer active:opacity-90 transition">
+      <div class="space-y-1">
+        <div class="flex items-center space-x-2">
+          <span class="badge-accent font-mincho text-[11px] px-2 py-0.5 rounded-full bg-[#FAF8F5]" id="badge-age">70代</span>
+          <span class="font-mincho text-xs font-bold text-[#8C6A1D]" id="badge-conditions">減塩・Mg補給</span>
+        </div>
+        <div class="text-[11px] text-[#2B2926]/70 flex items-center gap-1" id="summary-avoid-text">
+          <i data-lucide="sliders-horizontal" class="w-3 h-3 text-[#8C6A1D]"></i>
+          <span>設定条件に合わせて最適化中</span>
+        </div>
+      </div>
+      <div class="flex items-center text-xs font-mincho font-bold text-[#8C6A1D]">
+        <span data-i18n="changeConditions">条件変更</span>
+        <i data-lucide="chevron-right" class="w-4 h-4 ml-0.5"></i>
+      </div>
+    </div>
+
+    <!-- Mg Progress Bar (Pattern: stone track + accent-fill) -->
+    <div class="card-base rounded-xl p-3 space-y-1.5">
+      <div class="flex items-center justify-between text-xs">
+        <span class="font-mincho font-bold text-[#2B2926] flex items-center gap-1">
+          <i data-lucide="zap" class="w-3.5 h-3.5 text-[#8C6A1D]"></i>
+          <span data-i18n="mgProgressLabel">今週のマグネシウム補給達成度</span>
+        </span>
+        <span class="font-mincho font-bold text-[#8C6A1D]" id="mg-ratio-text">7 / 7 日達成</span>
+      </div>
+      <div class="w-full h-2 rounded-full progress-track overflow-hidden">
+        <div id="mg-progress-bar" class="h-full progress-fill rounded-full transition-all duration-300" style="width: 100%;"></div>
+      </div>
+    </div>
+
+    <!-- TAB 1: 週間献立 (Week Plan) -->
+    <div id="tab-plan" class="space-y-2.5">
+      <div id="days-container" class="space-y-2.5">
+        <!-- Rendered via JS -->
+      </div>
+    </div>
+
+    <!-- TAB 2: 買い物帳 (Shopping List) -->
+    <div id="tab-shopping" class="hidden space-y-3">
+      <div class="card-base rounded-xl p-3.5 space-y-3">
+        <div class="flex items-center justify-between border-b border-[#DDD6C6] pb-2">
+          <div>
+            <h2 class="font-mincho font-bold text-sm text-[#2B2926] flex items-center gap-1">
+              <i data-lucide="shopping-cart" class="w-4 h-4 text-[#8C6A1D]"></i>
+              <span data-i18n="shoppingTitle">パレンケ・スーパー買い出し帳</span>
+            </h2>
+            <p class="text-[11px] text-[#2B2926]/70" data-i18n="shoppingSubtitle">1週間の献立から食材を自動集計します</p>
+          </div>
+          <button onclick="playAudioTone(); clearCheckedItems();" class="text-[11px] text-[#8C6A1D] underline" data-i18n="resetBtn">リセット</button>
+        </div>
+
+        <div id="shopping-list-content" class="space-y-3">
+          <!-- Rendered via JS -->
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 3: 料理一覧 (Dishes) -->
+    <div id="tab-recipes" class="hidden space-y-3">
+      <div class="flex gap-1.5 overflow-x-auto no-scrollbar pb-1 text-xs">
+        <button onclick="playAudioTone(); filterRecipeList('all')" class="recipe-filter-btn px-3 py-1 rounded-full font-mincho font-bold bg-[#E0B23A] text-[#2B2926]" data-filter="all" data-i18n="filterAll">すべて</button>
+        <button onclick="playAudioTone(); filterRecipeList('mg')" class="recipe-filter-btn px-3 py-1 rounded-full font-mincho card-base text-[#2B2926]" data-filter="mg" data-i18n="filterMg">Mg高含有</button>
+        <button onclick="playAudioTone(); filterRecipeList('breakfast')" class="recipe-filter-btn px-3 py-1 rounded-full font-mincho card-base text-[#2B2926]" data-filter="breakfast" data-i18n="filterBreakfast">朝食</button>
+        <button onclick="playAudioTone(); filterRecipeList('lunch')" class="recipe-filter-btn px-3 py-1 rounded-full font-mincho card-base text-[#2B2926]" data-filter="lunch" data-i18n="filterLunch">昼食</button>
+        <button onclick="playAudioTone(); filterRecipeList('dinner')" class="recipe-filter-btn px-3 py-1 rounded-full font-mincho card-base text-[#2B2926]" data-filter="dinner" data-i18n="filterDinner">夕食</button>
+      </div>
+
+      <div id="recipe-master-list" class="space-y-2">
+        <!-- Rendered via JS -->
+      </div>
+    </div>
+
+    <!-- TAB 4: 条件設定 (Settings) -->
+    <div id="tab-settings" class="hidden space-y-3">
+      <div class="card-base rounded-xl p-4 space-y-4">
+        
+        <div class="border-b border-[#DDD6C6] pb-2">
+          <h2 class="font-mincho font-bold text-sm text-[#2B2926] flex items-center gap-1.5">
+            <i data-lucide="sliders" class="w-4 h-4 text-[#8C6A1D]"></i>
+            <span data-i18n="settingsTitle">献立の条件・健康設定</span>
+          </h2>
+          <p class="text-[11px] text-[#2B2926]/70" data-i18n="settingsSubtitle">設定条件に合わせて「一括生成」が動作します</p>
+        </div>
+
+        <!-- 年齢 -->
+        <div class="space-y-1">
+          <label class="font-mincho text-xs font-bold text-[#2B2926]" data-i18n="ageLabel">年代</label>
+          <select id="setting-age" onchange="saveProfileSettings()" class="w-full text-xs p-2.5 rounded-lg border border-[#DDD6C6] bg-[#FAF8F5] focus:outline-none focus:border-[#E0B23A]">
+            <option value="60s" data-i18n="age60">60代（消化・活力）</option>
+            <option value="70s" selected data-i18n="age70">70代（減塩・柔らかめ・ミネラル補給）</option>
+            <option value="80s" data-i18n="age80">80代（高消化・小分け・滋養）</option>
+            <option value="general" data-i18n="ageGeneral">一般</option>
+          </select>
+        </div>
+
+        <!-- 持病・重点ケア -->
+        <div class="space-y-2">
+          <label class="font-mincho text-xs font-bold text-[#2B2926]" data-i18n="conditionsLabel">重点ケア項目（複数選択可）</label>
+          <div class="grid grid-cols-1 gap-1.5 text-xs">
+            <label class="flex items-center space-x-2.5 p-2 rounded-lg card-deep cursor-pointer">
+              <input type="checkbox" id="cond-low-sodium" onchange="saveProfileSettings()" checked class="w-4 h-4 rounded text-[#E0B23A] focus:ring-0">
+              <div>
+                <div class="font-mincho font-bold text-xs" data-i18n="condLowSodiumTitle">減塩ケア（出汁・生姜風味）</div>
+                <div class="text-[10px] text-[#2B2926]/70" data-i18n="condLowSodiumDesc">パティスや塩分を控えめに調整します</div>
+              </div>
+            </label>
+            <label class="flex items-center space-x-2.5 p-2 rounded-lg card-deep cursor-pointer">
+              <input type="checkbox" id="cond-mg-boost" onchange="saveProfileSettings()" checked class="w-4 h-4 rounded text-[#E0B23A] focus:ring-0">
+              <div>
+                <div class="font-mincho font-bold text-xs" data-i18n="condMgTitle">マグネシウム積極補給</div>
+                <div class="text-[10px] text-[#2B2926]/70" data-i18n="condMgDesc">モリンガ、緑豆、カカオ、豆腐を優先します</div>
+              </div>
+            </label>
+            <label class="flex items-center space-x-2.5 p-2 rounded-lg card-deep cursor-pointer">
+              <input type="checkbox" id="cond-low-oil" onchange="saveProfileSettings()" checked class="w-4 h-4 rounded text-[#E0B23A] focus:ring-0">
+              <div>
+                <div class="font-mincho font-bold text-xs" data-i18n="condLowOilTitle">胃腸・脂質ケア（低油分）</div>
+                <div class="text-[10px] text-[#2B2926]/70" data-i18n="condLowOilDesc">蒸し物・スープ・煮込み料理を優先します</div>
+              </div>
+            </label>
+            <label class="flex items-center space-x-2.5 p-2 rounded-lg card-deep cursor-pointer">
+              <input type="checkbox" id="cond-low-purine" onchange="saveProfileSettings()" class="w-4 h-4 rounded text-[#E0B23A] focus:ring-0">
+              <div>
+                <div class="font-mincho font-bold text-xs" data-i18n="condLowPurineTitle">プリン体ケア</div>
+                <div class="text-[10px] text-[#2B2926]/70" data-i18n="condLowPurineDesc">甲殻類・過度な肉類を控えます</div>
+              </div>
+            </label>
+            <label class="flex items-center space-x-2.5 p-2 rounded-lg card-deep cursor-pointer">
+              <input type="checkbox" id="cond-japanese-treat" onchange="saveProfileSettings()" checked class="w-4 h-4 rounded text-[#E0B23A] focus:ring-0">
+              <div>
+                <div class="font-mincho font-bold text-xs" data-i18n="condJapaneseTitle">たまに日本の味も楽しむ</div>
+                <div class="text-[10px] text-[#2B2926]/70" data-i18n="condJapaneseDesc">卵焼きや親子丼など和食メニューを時々織り交ぜます</div>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <!-- 苦手な食材 -->
+        <div class="space-y-1.5">
+          <label class="font-mincho text-xs font-bold text-[#2B2926]" data-i18n="avoidLabel">除外したい食材</label>
+          <div class="flex flex-wrap gap-1.5 text-xs">
+            <label class="inline-flex items-center space-x-1 px-2.5 py-1.5 rounded-lg card-deep cursor-pointer">
+              <input type="checkbox" class="avoid-checkbox" value="ampalaya" onchange="saveProfileSettings()">
+              <span class="text-[11px]" data-i18n="avoidAmpalaya">ゴーヤ</span>
+            </label>
+            <label class="inline-flex items-center space-x-1 px-2.5 py-1.5 rounded-lg card-deep cursor-pointer">
+              <input type="checkbox" class="avoid-checkbox" value="shellfish" onchange="saveProfileSettings()">
+              <span class="text-[11px]" data-i18n="avoidShellfish">エビ・甲殻類</span>
+            </label>
+            <label class="inline-flex items-center space-x-1 px-2.5 py-1.5 rounded-lg card-deep cursor-pointer">
+              <input type="checkbox" class="avoid-checkbox" value="pork" onchange="saveProfileSettings()">
+              <span class="text-[11px]" data-i18n="avoidPork">豚肉</span>
+            </label>
+            <label class="inline-flex items-center space-x-1 px-2.5 py-1.5 rounded-lg card-deep cursor-pointer">
+              <input type="checkbox" class="avoid-checkbox" value="fish" onchange="saveProfileSettings()">
+              <span class="text-[11px]" data-i18n="avoidFish">魚介</span>
+            </label>
+            <label class="inline-flex items-center space-x-1 px-2.5 py-1.5 rounded-lg card-deep cursor-pointer">
+              <input type="checkbox" class="avoid-checkbox" value="spicy" onchange="saveProfileSettings()" checked>
+              <span class="text-[11px]" data-i18n="avoidSpicy">激辛・唐辛子</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- 保存ボタン -->
+        <button onclick="playAudioTone(); applySettingsAndGenerate();" class="btn-primary w-full py-2.5 rounded-xl font-mincho text-xs flex items-center justify-center space-x-1.5 shadow-sm active:scale-95 transition">
+          <i data-lucide="refresh-cw" class="w-4 h-4"></i>
+          <span data-i18n="saveBtn">設定を反映して再編成します</span>
+        </button>
+
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Bottom Navigation Bar (Accent Line + Mincho Labels) -->
+  <nav class="fixed bottom-0 left-0 right-0 z-30 bg-[#FAF8F5] border-t border-[#DDD6C6] py-2 px-3 flex justify-around max-w-md mx-auto shadow-md">
+    <button onclick="playAudioTone(); switchTab('plan')" id="nav-plan" class="tab-item active flex flex-col items-center gap-0.5 px-3 py-1 transition">
+      <i data-lucide="calendar" class="w-4 h-4"></i>
+      <span class="text-[10px] font-mincho" data-i18n="navPlan">週間献立</span>
+    </button>
+    <button onclick="playAudioTone(); switchTab('shopping')" id="nav-shopping" class="tab-item flex flex-col items-center gap-0.5 px-3 py-1 transition">
+      <i data-lucide="shopping-bag" class="w-4 h-4"></i>
+      <span class="text-[10px] font-mincho" data-i18n="navShopping">買い物帳</span>
+    </button>
+    <button onclick="playAudioTone(); switchTab('recipes')" id="nav-recipes" class="tab-item flex flex-col items-center gap-0.5 px-3 py-1 transition">
+      <i data-lucide="book-open" class="w-4 h-4"></i>
+      <span class="text-[10px] font-mincho" data-i18n="navRecipes">料理帳</span>
+    </button>
+    <button onclick="playAudioTone(); switchTab('settings')" id="nav-settings" class="tab-item flex flex-col items-center gap-0.5 px-3 py-1 transition">
+      <i data-lucide="sliders" class="w-4 h-4"></i>
+      <span class="text-[10px] font-mincho" data-i18n="navSettings">条件設定</span>
+    </button>
+  </nav>
+
+  <!-- Modal: 料理選択 -->
+  <div id="dish-modal" class="fixed inset-0 z-50 bg-[#2B2926]/50 backdrop-blur-xs hidden flex items-end sm:items-center justify-center p-0 sm:p-4">
+    <div class="bg-[#FAF8F5] w-full max-w-md rounded-t-2xl sm:rounded-2xl max-h-[80vh] flex flex-col border border-[#DDD6C6] shadow-xl overflow-hidden">
+      
+      <div class="px-4 py-3 border-b border-[#DDD6C6] flex items-center justify-between bg-white">
+        <div>
+          <h3 class="font-mincho font-bold text-sm text-[#2B2926]" id="modal-title">献立を変更します</h3>
+          <p class="text-[10px] text-[#2B2926]/70" id="modal-subtitle" data-i18n="modalSelectDish">料理を選択してください</p>
+        </div>
+        <button onclick="playAudioTone(); closeModal()" class="p-1 text-[#2B2926]/60 hover:text-[#2B2926]">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <!-- Filter Tags -->
+      <div class="p-2.5 bg-[#FAF8F5] border-b border-[#DDD6C6] flex gap-1.5 overflow-x-auto no-scrollbar text-xs">
+        <button onclick="playAudioTone(); filterModalDishes('all')" class="modal-tag-btn px-2.5 py-1 rounded-md bg-[#E0B23A] text-[#2B2926] font-mincho font-bold text-[11px]" data-tag="all" data-i18n="modalAll">すべて</button>
+        <button onclick="playAudioTone(); filterModalDishes('mg')" class="modal-tag-btn px-2.5 py-1 rounded-md card-base text-[#2B2926] font-mincho text-[11px]" data-tag="mg" data-i18n="modalMg">Mg高含有</button>
+        <button onclick="playAudioTone(); filterModalDishes('soup')" class="modal-tag-btn px-2.5 py-1 rounded-md card-base text-[#2B2926] font-mincho text-[11px]" data-tag="soup" data-i18n="modalSoup">汁物</button>
+        <button onclick="playAudioTone(); filterModalDishes('easy')" class="modal-tag-btn px-2.5 py-1 rounded-md card-base text-[#2B2926] font-mincho text-[11px]" data-tag="easy" data-i18n="modalEasy">手軽</button>
+      </div>
+
+      <!-- Options -->
+      <div id="modal-dish-list" class="p-3 overflow-y-auto space-y-2 flex-1">
+        <!-- Rendered via JS -->
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // ==========================================
+    // 1. 437Hz WEB AUDIO BRAND TONE
+    // ==========================================
+    let audioCtx = null;
+    function playAudioTone() {
+      try {
+        if (!audioCtx) {
+          audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        }
+        if (audioCtx.state === 'suspended') {
+          audioCtx.resume();
+        }
+        const osc = audioCtx.createOscillator();
+        const gain = audioCtx.createGain();
+        osc.type = 'sine';
+        osc.frequency.setValueAtTime(437, audioCtx.currentTime); // 437Hz Unified Brand Sound
+        gain.gain.setValueAtTime(0.04, audioCtx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + 0.12);
+        osc.connect(gain);
+        gain.connect(audioCtx.destination);
+        osc.start();
+        osc.stop(audioCtx.currentTime + 0.12);
+      } catch (e) {}
+    }
+
+    // Safe wrapper: if the lucide CDN script is slow/blocked in a preview
+    // sandbox, calling lucide.createIcons() would throw and could abort
+    // whatever render function called it. Icons are cosmetic, so we simply
+    // skip them rather than let a missing library break the whole render.
+    function safeCreateIcons() {
+      try {
+        if (typeof lucide !== "undefined" && lucide && lucide.createIcons) {
+          lucide.createIcons();
+        }
+      } catch (e) {}
+    }
+
+    // ==========================================
+    // 2. DISH MASTER DATA (Local Manila Healthy)
+    // ==========================================
+    const DISHES = [
+      {
+        id: "d_tsokolate",
+        name: "Tsokolate Drink",
+        nameJa: "タブレアの温チョコラーテ",
+        mealType: "breakfast",
+        mgLevel: "high",
+        tags: ["mg", "easy", "soft"],
+        avoidTags: [],
+        ingredients: [
+          { item: "Tablea (カカオ塊)", qty: "2個", itemEn: "Tablea (cacao tablet)", qtyEn: "2 pcs", cat: "dry" },
+          { item: "低脂肪乳 または お湯", qty: "150ml", itemEn: "Low-fat milk or hot water", qtyEn: "150ml", cat: "dairy" }
+        ],
+        tip: "砂糖控えめ。カカオの純粋なマグネシウムを補給します。",
+        tipEn: "Go light on sugar — a pure source of magnesium from cacao.",
+        steps: ["鍋に低脂肪乳またはお湯を入れ、弱火にかけます。", "Tableaを割り入れ、溶けるまでゆっくり混ぜます。", "温まったらカップに注いで完成です。"],
+        stepsEn: ["Warm the low-fat milk or hot water in a small pot over low heat.", "Break in the tablea and stir slowly until fully melted.", "Pour into a cup once heated through and serve."]
+      },
+      {
+        id: "d_oatmeal_goma",
+        name: "Oatmeal with Sesame & Banana",
+        nameJa: "オートミール（すりごま＆バナナ）",
+        mealType: "breakfast",
+        mgLevel: "high",
+        tags: ["mg", "easy", "soft", "low_sodium"],
+        avoidTags: [],
+        ingredients: [
+          { item: "オートミール", qty: "40g", itemEn: "Rolled oats", qtyEn: "40g", cat: "dry" },
+          { item: "Sabaバナナ または ラカタン", qty: "1本", itemEn: "Saba or Lakatan banana", qtyEn: "1 pc", cat: "produce" },
+          { item: "すりごま", qty: "大さじ1", itemEn: "Ground sesame seeds", qtyEn: "1 tbsp", cat: "dry" }
+        ],
+        tip: "ごまと麦のダブル補給。胃腸に優しく食物繊維も豊富です。",
+        tipEn: "Double magnesium from sesame and oats — gentle on digestion and rich in fiber.",
+        steps: ["オートミールに熱湯を注ぎ、3分ほど蒸らします。", "バナナを輪切りにして乗せます。", "すりごまを振りかけて完成です。"],
+        stepsEn: ["Pour hot water over the oats and let sit for about 3 minutes.", "Slice the banana and place on top.", "Sprinkle with ground sesame and serve."]
+      },
+      {
+        id: "d_pandesal_egg",
+        name: "Pan de Sal & Boiled Egg",
+        nameJa: "パンデサル ＆ ゆで卵・果物",
+        mealType: "breakfast",
+        mgLevel: "med",
+        tags: ["easy", "soft"],
+        avoidTags: [],
+        ingredients: [
+          { item: "Pan de Sal", qty: "2個", itemEn: "Pan de Sal", qtyEn: "2 pcs", cat: "bakery" },
+          { item: "卵", qty: "1個", itemEn: "Egg", qtyEn: "1 pc", cat: "tofu_egg" },
+          { item: "パパイヤ または マンゴー", qty: "1切れ", itemEn: "Papaya or mango", qtyEn: "1 slice", cat: "produce" }
+        ],
+        tip: "消化酵素を含むパパイヤを添えた定番の朝食です。",
+        tipEn: "A classic breakfast, served with papaya for its digestive enzymes.",
+        steps: ["卵を沸騰したお湯で8〜10分ゆでます。", "パンデサルを軽くトーストします。", "パパイヤまたはマンゴーを添えて盛り付けます。"],
+        stepsEn: ["Boil the egg in simmering water for 8-10 minutes.", "Lightly toast the pan de sal.", "Plate with a slice of papaya or mango."]
+      },
+      {
+        id: "d_arroz_caldo",
+        name: "Arroz Caldo with Ginger",
+        nameJa: "アロズ・カルド（鶏と生姜のお粥）",
+        mealType: "breakfast",
+        mgLevel: "med",
+        tags: ["soup", "easy", "soft", "low_sodium"],
+        avoidTags: [],
+        ingredients: [
+          { item: "米", qty: "0.5合", itemEn: "Rice", qtyEn: "1/2 cup (uncooked)", cat: "dry" },
+          { item: "鶏むね肉", qty: "50g", itemEn: "Chicken breast", qtyEn: "50g", cat: "meat" },
+          { item: "生姜 (Luya)", qty: "1片", itemEn: "Ginger (Luya)", qtyEn: "1 knob", cat: "produce" },
+          { item: "小ネギ・にんにくチップ", qty: "少々", itemEn: "Spring onion & garlic chips", qtyEn: "a little", cat: "produce" }
+        ],
+        tip: "生姜で体を温め、胃腸を労わる朝のお粥です。",
+        tipEn: "Ginger warms the body — a gentle rice porridge to start the day.",
+        steps: ["鍋に米、鶏むね肉、生姜を入れ、水を加えて煮ます。", "米が柔らかくなるまで弱火で20分ほど煮込みます。", "器に盛り、小ネギとにんにくチップを散らします。"],
+        stepsEn: ["Combine rice, chicken breast, and ginger in a pot with water.", "Simmer on low for about 20 minutes until the rice is soft.", "Ladle into a bowl and top with spring onion and garlic chips."]
+      },
+      {
+        id: "d_monggo",
+        name: "Ginisang Monggo at Malunggay",
+        nameJa: "緑豆とモリンガの煮込みスープ",
+        mealType: "dinner",
+        mgLevel: "high",
+        tags: ["mg", "soup", "soft", "low_sodium"],
+        avoidTags: [],
+        ingredients: [
+          { item: "Monggo (緑豆)", qty: "1/2カップ", itemEn: "Monggo (mung beans)", qtyEn: "1/2 cup", cat: "dry" },
+          { item: "Malunggay (モリンガ葉)", qty: "1束", itemEn: "Malunggay leaves", qtyEn: "1 bunch", cat: "produce" },
+          { item: "Tokwa (木綿豆腐)", qty: "1丁", itemEn: "Tokwa (firm tofu)", qtyEn: "1 block", cat: "tofu_egg" },
+          { item: "玉ねぎ・にんにく", qty: "各少々", itemEn: "Onion & garlic", qtyEn: "a little each", cat: "produce" }
+        ],
+        tip: "緑豆とモリンガでマグネシウムを最大補給します。",
+        tipEn: "Mung beans and malunggay together give the biggest magnesium boost.",
+        steps: ["玉ねぎとにんにくを香りが出るまで炒めます。", "緑豆を加え、水を注いで柔らかくなるまで煮ます。", "豆腐とモリンガ葉を加え、さっと煮て完成です。"],
+        stepsEn: ["Sauté the onion and garlic until fragrant.", "Add the mung beans and water, and simmer until soft.", "Stir in the tofu and malunggay leaves, and cook briefly to finish."]
+      },
+      {
+        id: "d_kangkong_garlic",
+        name: "Ginisang Kangkong with Tofu",
+        nameJa: "空芯菜と豆腐の薄味炒め",
+        mealType: "dinner",
+        mgLevel: "high",
+        tags: ["mg", "easy", "low_sodium"],
+        avoidTags: [],
+        ingredients: [
+          { item: "Kangkong (空芯菜)", qty: "1束", itemEn: "Kangkong (water spinach)", qtyEn: "1 bunch", cat: "produce" },
+          { item: "Tokwa (木綿豆腐)", qty: "1/2丁", itemEn: "Tokwa (firm tofu)", qtyEn: "1/2 block", cat: "tofu_egg" },
+          { item: "にんにく (Bawang)", qty: "2片", itemEn: "Garlic (Bawang)", qtyEn: "2 cloves", cat: "produce" }
+        ],
+        tip: "空芯菜は強火で手早く炒め、シャキッと仕上げます。",
+        tipEn: "Stir-fry the kangkong quickly over high heat to keep it crisp.",
+        steps: ["にんにくを油で香りが出るまで炒めます。", "空芯菜を加え、強火で手早く炒めます。", "豆腐を加えてさっと混ぜ、味を調えて完成です。"],
+        stepsEn: ["Sauté the garlic in oil until fragrant.", "Add the kangkong and stir-fry quickly over high heat.", "Add the tofu, toss briefly, adjust seasoning, and serve."]
+      },
+      {
+        id: "d_tinola",
+        name: "Tinolang Manok at Papaya",
+        nameJa: "ティノラ・マノック（鶏と青パパイヤの生姜汁）",
+        mealType: "lunch",
+        mgLevel: "high",
+        tags: ["mg", "soup", "soft", "low_sodium"],
+        avoidTags: [],
+        ingredients: [
+          { item: "鶏もも肉 (皮なし切身)", qty: "150g", itemEn: "Chicken thigh (skinless, cut)", qtyEn: "150g", cat: "meat" },
+          { item: "青パパイヤ (またはSayote)", qty: "1/2個", itemEn: "Green papaya (or sayote)", qtyEn: "1/2 pc", cat: "produce" },
+          { item: "Malunggay (モリンガ葉)", qty: "1束", itemEn: "Malunggay leaves", qtyEn: "1 bunch", cat: "produce" },
+          { item: "生姜 (Luya)", qty: "1片", itemEn: "Ginger (Luya)", qtyEn: "1 knob", cat: "produce" }
+        ],
+        tip: "生姜の風味を活かし、塩分控えめで煮込みます。",
+        tipEn: "Let the ginger flavor lead — simmer with less salt.",
+        steps: ["鶏もも肉と生姜を油で軽く炒めます。", "水を加えて煮立たせ、青パパイヤを入れて柔らかくなるまで煮ます。", "モリンガ葉を加え、さっと煮て完成です。"],
+        stepsEn: ["Lightly sauté the chicken thigh and ginger in oil.", "Add water, bring to a boil, and add the green papaya; simmer until soft.", "Stir in the malunggay leaves and cook briefly to finish."]
+      },
+      {
+        id: "d_sotanghon_gisado",
+        name: "Sotanghon Gisado",
+        nameJa: "春雨とたっぷり野菜の炒め物",
+        mealType: "lunch",
+        mgLevel: "med",
+        tags: ["easy", "soft"],
+        avoidTags: [],
+        ingredients: [
+          { item: "Sotanghon (春雨)", qty: "100g", itemEn: "Sotanghon (glass noodles)", qtyEn: "100g", cat: "dry" },
+          { item: "キャベツ・人参", qty: "各50g", itemEn: "Cabbage & carrot", qtyEn: "50g each", cat: "produce" },
+          { item: "キクラゲ", qty: "少々", itemEn: "Wood ear mushroom", qtyEn: "a little", cat: "dry" },
+          { item: "鶏ささみ", qty: "50g", itemEn: "Chicken tenderloin", qtyEn: "50g", cat: "meat" }
+        ],
+        tip: "消化の良い春雨にカラマンシーを絞って食欲を促します。",
+        tipEn: "Easy-to-digest glass noodles — a squeeze of calamansi helps the appetite.",
+        steps: ["鶏ささみとキャベツ・人参を炒めます。", "水を加えて煮立たせ、春雨とキクラゲを加えます。", "春雨が柔らかくなったら味を調えて完成です。"],
+        stepsEn: ["Stir-fry the chicken tenderloin with cabbage and carrot.", "Add water, bring to a boil, and add the glass noodles and wood ear mushroom.", "Once the noodles are soft, adjust the seasoning and serve."]
+      },
+      {
+        id: "d_tortang_talong",
+        name: "Tortang Talong (Low Oil)",
+        nameJa: "トルタン・タロン（焼きナスの薄焼き卵）",
+        mealType: "dinner",
+        mgLevel: "med",
+        tags: ["easy", "soft"],
+        avoidTags: [],
+        ingredients: [
+          { item: "Talong (長ナス)", qty: "2本", itemEn: "Talong (long eggplant)", qtyEn: "2 pcs", cat: "produce" },
+          { item: "卵", qty: "2個", itemEn: "Eggs", qtyEn: "2 pcs", cat: "tofu_egg" },
+          { item: "玉ねぎ", qty: "少々", itemEn: "Onion", qtyEn: "a little", cat: "produce" }
+        ],
+        tip: "皮を香ばしく焼いて剥き、油分を抑えて焼き上げます。",
+        tipEn: "Grill the skin until fragrant, then peel — cooked with minimal oil.",
+        steps: ["ナスを直火またはグリルで皮が焦げるまで焼きます。", "皮をむき、フォークで軽くつぶします。", "溶き卵にくぐらせ、少量の油で両面を焼いて完成です。"],
+        stepsEn: ["Grill the eggplant directly over flame until the skin is charred.", "Peel and gently flatten the flesh with a fork.", "Dip in beaten egg and pan-fry both sides in a little oil."]
+      },
+      {
+        id: "d_bangus_grilled",
+        name: "Inihaw na Bangus",
+        nameJa: "バングス（ミルクフィッシュ）の塩焼き",
+        mealType: "dinner",
+        mgLevel: "med",
+        tags: ["easy", "low_sodium"],
+        avoidTags: ["fish"],
+        ingredients: [
+          { item: "Bangus (骨抜き開き)", qty: "1尾", itemEn: "Bangus (boneless, butterflied)", qtyEn: "1 pc", cat: "fish" },
+          { item: "トマト・玉ねぎ", qty: "各1/2個", itemEn: "Tomato & onion", qtyEn: "1/2 pc each", cat: "produce" },
+          { item: "カラマンシー", qty: "2個", itemEn: "Calamansi", qtyEn: "2 pcs", cat: "produce" }
+        ],
+        tip: "Boneless（骨抜き）を使用し、香ばしく直火で焼きます。",
+        tipEn: "Use boneless bangus and grill it over direct heat until fragrant.",
+        steps: ["バングスにカラマンシーを絞り、軽く下味をつけます。", "直火またはグリルで両面を香ばしく焼きます。", "トマトと玉ねぎを添えて盛り付けます。"],
+        stepsEn: ["Squeeze calamansi over the bangus for a light marinade.", "Grill both sides over direct heat until fragrant.", "Serve with sliced tomato and onion."]
+      },
+      {
+        id: "d_sayote_gisado",
+        name: "Ginisang Sayote at Baboy",
+        nameJa: "ハヤトウリと豚ひき肉の生姜炒め",
+        mealType: "lunch",
+        mgLevel: "med",
+        tags: ["easy", "soft"],
+        avoidTags: ["pork"],
+        ingredients: [
+          { item: "Sayote (ハヤトウリ)", qty: "1個", itemEn: "Sayote (chayote)", qtyEn: "1 pc", cat: "produce" },
+          { item: "豚ひき肉", qty: "50g", itemEn: "Ground pork", qtyEn: "50g", cat: "meat" },
+          { item: "生姜・にんにく", qty: "少々", itemEn: "Ginger & garlic", qtyEn: "a little", cat: "produce" }
+        ],
+        tip: "柔らかいハヤトウリを出汁と薄口醤油で仕上げます。",
+        tipEn: "Simmer the soft sayote in light dashi and soy sauce.",
+        steps: ["豚ひき肉を生姜・にんにくと一緒に炒めます。", "ハヤトウリを加えて炒め合わせます。", "水を少量加えて蓋をし、柔らかくなるまで煮て完成です。"],
+        stepsEn: ["Sauté the ground pork with ginger and garlic.", "Add the sayote and stir-fry together.", "Add a splash of water, cover, and simmer until soft."]
+      },
+      {
+        id: "d_paksiw_fish",
+        name: "Paksiw na Isda (Mild Vinegar)",
+        nameJa: "白身魚と野菜のさっぱり酢煮",
+        mealType: "dinner",
+        mgLevel: "med",
+        tags: ["easy", "soft"],
+        avoidTags: ["fish"],
+        ingredients: [
+          { item: "白身魚 (Tilapia切身)", qty: "1切れ", itemEn: "White fish (Tilapia fillet)", qtyEn: "1 pc", cat: "fish" },
+          { item: "ナス・オクラ", qty: "各少量", itemEn: "Eggplant & okra", qtyEn: "a little each", cat: "produce" },
+          { item: "生姜・お酢・薄口醤油", qty: "適量", itemEn: "Ginger, vinegar & light soy sauce", qtyEn: "as needed", cat: "dry" }
+        ],
+        tip: "お酢の酸味で塩分を補い、さっぱりと煮ます。",
+        tipEn: "Vinegar's tartness adds flavor without extra salt.",
+        steps: ["鍋に魚、ナス、オクラを並べます。", "生姜・お酢・薄口醤油を加え、蓋をして煮ます。", "魚に火が通ったら完成です。"],
+        stepsEn: ["Arrange the fish, eggplant, and okra in a pot.", "Add ginger, vinegar, and light soy sauce, cover, and simmer.", "Cook until the fish is done through."]
+      },
+      {
+        id: "d_tofu_mushroom_ankake",
+        name: "Tokwa at Mushroom Ankake",
+        nameJa: "豆腐とキノコの生姜あんかけ",
+        mealType: "dinner",
+        mgLevel: "high",
+        tags: ["mg", "soft", "easy", "low_sodium"],
+        avoidTags: [],
+        ingredients: [
+          { item: "Tokwa (木綿豆腐)", qty: "1丁", itemEn: "Tokwa (firm tofu)", qtyEn: "1 block", cat: "tofu_egg" },
+          { item: "エノキ・しいたけ", qty: "各50g", itemEn: "Enoki & shiitake mushrooms", qtyEn: "50g each", cat: "produce" },
+          { item: "生姜・和風だしあん", qty: "適量", itemEn: "Ginger & Japanese-style dashi sauce", qtyEn: "as needed", cat: "dry" }
+        ],
+        tip: "喉越しが柔らかく、豆腐の植物性タンパクとMgを補給します。",
+        tipEn: "Smooth and easy to swallow — tofu adds plant protein plus magnesium.",
+        steps: ["エノキ・しいたけを出汁で軽く煮ます。", "水溶き片栗粉でとろみをつけ、生姜を加えます。", "温めた豆腐にあんをかけて完成です。"],
+        stepsEn: ["Simmer the enoki and shiitake briefly in dashi.", "Thicken with a cornstarch slurry and stir in ginger.", "Pour over warmed tofu and serve."]
+      },
+      {
+        id: "d_ampalaya_egg",
+        name: "Ginisang Ampalaya with Egg & Tofu",
+        nameJa: "ゴーヤ・豆腐・卵の炒め物",
+        mealType: "dinner",
+        mgLevel: "high",
+        tags: ["mg", "easy"],
+        avoidTags: ["ampalaya"],
+        ingredients: [
+          { item: "Ampalaya (ゴーヤ)", qty: "1/2本", itemEn: "Ampalaya (bitter melon)", qtyEn: "1/2 pc", cat: "produce" },
+          { item: "Tokwa (豆腐)", qty: "1/2丁", itemEn: "Tokwa (tofu)", qtyEn: "1/2 block", cat: "tofu_egg" },
+          { item: "卵", qty: "1個", itemEn: "Egg", qtyEn: "1 pc", cat: "tofu_egg" }
+        ],
+        tip: "塩もみして苦味を抜き、卵でふんわりとまとめます。",
+        tipEn: "Salt the ampalaya first to reduce bitterness, then bind gently with egg.",
+        steps: ["ゴーヤを薄切りにし、塩もみして苦味を抜きます。", "豆腐と一緒に炒め合わせます。", "溶き卵を回し入れ、ふんわり仕上げて完成です。"],
+        stepsEn: ["Slice the ampalaya thinly and salt it to reduce bitterness.", "Stir-fry together with the tofu.", "Pour in beaten egg and fold gently until just set."]
+      },
+      {
+        id: "d_sinigang_shrimp",
+        name: "Sinigang na Hipon (Mild)",
+        nameJa: "エビと野菜のシニガン（薄味酸味汁）",
+        mealType: "lunch",
+        mgLevel: "med",
+        tags: ["soup"],
+        avoidTags: ["shellfish"],
+        ingredients: [
+          { item: "Hipon (エビ)", qty: "4〜5尾", itemEn: "Hipon (shrimp)", qtyEn: "4-5 pcs", cat: "fish" },
+          { item: "Kangkong (空芯菜)", qty: "1束", itemEn: "Kangkong (water spinach)", qtyEn: "1 bunch", cat: "produce" },
+          { item: "大根・オクラ", qty: "少量", itemEn: "Radish & okra", qtyEn: "a little", cat: "produce" }
+        ],
+        tip: "タマリンドの酸味で減塩。スープは薄めに仕立てます。",
+        tipEn: "Tamarind sourness lets you use less salt — keep the broth light.",
+        steps: ["鍋に水と大根、オクラを入れて煮立たせます。", "シニガンミックス（タマリンド）を加えて味を調えます。", "エビと空芯菜を加え、火が通ったら完成です。"],
+        stepsEn: ["Bring water with radish and okra to a boil.", "Add sinigang (tamarind) mix and adjust the seasoning.", "Add the shrimp and kangkong, and cook until done."]
+      },
+      {
+        id: "d_pork_adobo_mild",
+        name: "Healthy Vinegar Pork Adobo",
+        nameJa: "お酢たっぷり減塩ポークアドボ",
+        mealType: "dinner",
+        mgLevel: "med",
+        tags: ["soft"],
+        avoidTags: ["pork"],
+        ingredients: [
+          { item: "豚赤身肉", qty: "150g", itemEn: "Lean pork", qtyEn: "150g", cat: "meat" },
+          { item: "にんにく (Bawang)", qty: "3片", itemEn: "Garlic (Bawang)", qtyEn: "3 cloves", cat: "produce" },
+          { item: "ローリエ・米酢・減塩醤油", qty: "適量", itemEn: "Bay leaf, rice vinegar & low-sodium soy sauce", qtyEn: "as needed", cat: "dry" }
+        ],
+        tip: "お酢の力で肉を柔らかく煮込みます。",
+        tipEn: "Vinegar helps tenderize the meat as it simmers.",
+        steps: ["豚赤身肉とにんにくを鍋で軽く炒めます。", "米酢・減塩醤油・ローリエを加え、蓋をして煮込みます。", "肉が柔らかくなったら完成です。"],
+        stepsEn: ["Lightly brown the lean pork and garlic in a pot.", "Add rice vinegar, low-sodium soy sauce, and bay leaf, cover, and simmer.", "Cook until the meat is tender."]
+      },
+      {
+        id: "d_jp_tamagoyaki",
+        name: "Tamagoyaki Set",
+        nameJa: "卵焼きと梅干しのご飯",
+        mealType: "breakfast",
+        mgLevel: "med",
+        tags: ["japanese", "easy", "soft"],
+        avoidTags: [],
+        ingredients: [
+          { item: "卵", qty: "2個", itemEn: "Eggs", qtyEn: "2 pcs", cat: "tofu_egg" },
+          { item: "ご飯", qty: "茶碗1杯", itemEn: "Steamed rice", qtyEn: "1 bowl", cat: "dry" },
+          { item: "梅干し（あれば）", qty: "1個", itemEn: "Umeboshi pickled plum (if available)", qtyEn: "1 pc", cat: "dry" }
+        ],
+        tip: "ほんのり甘い卵焼きで、朝から日本の味を楽しみます。",
+        tipEn: "A gently sweet Japanese-style rolled omelet — a small taste of home to start the day.",
+        steps: ["卵を溶き、少量の砂糖と塩で軽く味をつけます。", "フライパンで薄く焼き、端から巻いていきます。", "食べやすく切り、ご飯と梅干しを添えて完成です。"],
+        stepsEn: ["Beat the eggs and season lightly with a little sugar and salt.", "Cook in thin layers in a pan, rolling from one end as you go.", "Slice into bite-sized pieces and serve with rice and umeboshi."]
+      },
+      {
+        id: "d_jp_oyakodon",
+        name: "Oyakodon (Chicken & Egg Rice Bowl)",
+        nameJa: "親子丼（鶏と卵のとろとろ丼）",
+        mealType: "lunch",
+        mgLevel: "med",
+        tags: ["japanese", "soft"],
+        avoidTags: [],
+        ingredients: [
+          { item: "鶏むね肉", qty: "100g", itemEn: "Chicken breast", qtyEn: "100g", cat: "meat" },
+          { item: "卵", qty: "2個", itemEn: "Eggs", qtyEn: "2 pcs", cat: "tofu_egg" },
+          { item: "玉ねぎ", qty: "1/2個", itemEn: "Onion", qtyEn: "1/2 pc", cat: "produce" },
+          { item: "減塩醤油・みりん", qty: "少々", itemEn: "Low-sodium soy sauce & mirin", qtyEn: "a little", cat: "dry" },
+          { item: "ご飯", qty: "茶碗1杯", itemEn: "Steamed rice", qtyEn: "1 bowl", cat: "dry" }
+        ],
+        tip: "卵でやさしくとじて、柔らかく食べやすい丼にします。",
+        tipEn: "Softly set with egg for a gentle, easy-to-eat rice bowl.",
+        steps: ["鶏肉と玉ねぎを、めんつゆ風の出汁で煮ます。", "火が通ったら溶き卵を回し入れます。", "半熟になったらご飯にのせて完成です。"],
+        stepsEn: ["Simmer the chicken and onion in a light dashi-based broth.", "Once cooked through, pour in the beaten egg.", "When just set, spoon over rice and serve."]
+      },
+      {
+        id: "d_jp_wafu_curry",
+        name: "Mild Japanese-Style Curry Rice",
+        nameJa: "和風カレーライス（具だくさん・薄味）",
+        mealType: "dinner",
+        mgLevel: "med",
+        tags: ["japanese", "soft"],
+        avoidTags: [],
+        ingredients: [
+          { item: "鶏もも肉", qty: "100g", itemEn: "Chicken thigh", qtyEn: "100g", cat: "meat" },
+          { item: "にんじん・じゃがいも・玉ねぎ", qty: "各1個", itemEn: "Carrot, potato & onion", qtyEn: "1 pc each", cat: "produce" },
+          { item: "カレールウ（減塩・甘口タイプ）", qty: "3〜4片", itemEn: "Curry roux (low-sodium, mild)", qtyEn: "3-4 blocks", cat: "dry" },
+          { item: "ご飯", qty: "茶碗1杯", itemEn: "Steamed rice", qtyEn: "1 bowl", cat: "dry" }
+        ],
+        tip: "野菜たっぷりで、辛さを抑えた優しいカレーです。",
+        tipEn: "Packed with vegetables and mild in spice — a gentle, comforting curry.",
+        steps: ["鶏もも肉と野菜を炒めます。", "水を加えて柔らかくなるまで煮ます。", "火を止めてカレールウを溶かし、再び温めて完成です。"],
+        stepsEn: ["Sauté the chicken thigh and vegetables.", "Add water and simmer until tender.", "Remove from heat, dissolve the curry roux, and reheat gently to finish."]
+      },
+      {
+        id: "d_jp_miso_tofu",
+        name: "Miso Soup with Tofu & Seaweed",
+        nameJa: "豆腐とわかめの味噌汁",
+        mealType: "dinner",
+        mgLevel: "high",
+        tags: ["japanese", "mg", "soup", "soft", "low_sodium"],
+        avoidTags: [],
+        ingredients: [
+          { item: "Tokwa (絹豆腐)", qty: "1/2丁", itemEn: "Tokwa (silken tofu)", qtyEn: "1/2 block", cat: "tofu_egg" },
+          { item: "乾燥わかめ", qty: "小さじ1", itemEn: "Dried wakame seaweed", qtyEn: "1 tsp", cat: "dry" },
+          { item: "味噌（減塩タイプ）", qty: "大さじ1", itemEn: "Miso paste (low-sodium)", qtyEn: "1 tbsp", cat: "dry" },
+          { item: "出汁", qty: "400ml", itemEn: "Dashi stock", qtyEn: "400ml", cat: "dry" }
+        ],
+        tip: "出汁を効かせ、味噌は控えめに。ご飯と一緒にどうぞ。",
+        tipEn: "Let the dashi carry the flavor and go light on miso — serve with rice.",
+        steps: ["出汁を鍋で温めます。", "豆腐とわかめを加えて軽く煮ます。", "火を弱め、味噌を溶き入れて完成です。"],
+        stepsEn: ["Warm the dashi in a pot.", "Add the tofu and wakame, and simmer briefly.", "Lower the heat, dissolve in the miso, and serve."]
+      },
+      {
+        id: "d_jp_sayote_dashi",
+        name: "Sayote Dashi Stew",
+        nameJa: "ハヤトウリの生姜だし煮",
+        mealType: "lunch",
+        mgLevel: "med",
+        tags: ["japanese", "soft", "low_sodium", "easy"],
+        avoidTags: [],
+        ingredients: [
+          { item: "Sayote (ハヤトウリ)", qty: "1個", itemEn: "Sayote (chayote)", qtyEn: "1 pc", cat: "produce" },
+          { item: "生姜 (Luya)", qty: "1片", itemEn: "Ginger (Luya)", qtyEn: "1 knob", cat: "produce" },
+          { item: "出汁", qty: "300ml", itemEn: "Dashi stock", qtyEn: "300ml", cat: "dry" },
+          { item: "薄口醤油・みりん", qty: "少々", itemEn: "Light soy sauce & mirin", qtyEn: "a little", cat: "dry" }
+        ],
+        tip: "出汁と生姜でじっくり煮て、優しい味わいに仕上げます。肉なしで胃腸にも軽い一品です。",
+        tipEn: "Simmered slowly in dashi and ginger for a gentle flavor — meat-free and light on the stomach.",
+        steps: ["ハヤトウリを一口大に切ります。", "出汁と生姜を鍋に入れ、ハヤトウリを加えて煮ます。", "薄口醤油・みりんで味を調え、柔らかくなったら完成です。"],
+        stepsEn: ["Cut the sayote into bite-sized pieces.", "Add dashi and ginger to a pot along with the sayote and simmer.", "Season with light soy sauce and mirin, and cook until tender."]
+      },
+      {
+        id: "d_jp_kangkong_ohitashi",
+        name: "Kangkong Ohitashi",
+        nameJa: "空芯菜の生姜おひたし",
+        mealType: "lunch",
+        mgLevel: "med",
+        tags: ["japanese", "easy", "soft", "low_sodium"],
+        avoidTags: [],
+        ingredients: [
+          { item: "Kangkong (空芯菜)", qty: "1束", itemEn: "Kangkong (water spinach)", qtyEn: "1 bunch", cat: "produce" },
+          { item: "生姜 (Luya)", qty: "1片", itemEn: "Ginger (Luya)", qtyEn: "1 knob", cat: "produce" },
+          { item: "出汁・減塩醤油", qty: "適量", itemEn: "Dashi & low-sodium soy sauce", qtyEn: "as needed", cat: "dry" },
+          { item: "かつお節（あれば）", qty: "少々", itemEn: "Bonito flakes (if available)", qtyEn: "a little", cat: "dry" }
+        ],
+        tip: "さっと茹でて出汁に浸すだけ。生姜の風味でさっぱりといただけます。",
+        tipEn: "Quickly blanched and steeped in dashi — light and refreshing with a hint of ginger.",
+        steps: ["空芯菜をさっと熱湯で茹でます。", "冷水にとって水気を絞ります。", "出汁・減塩醤油・生姜と和え、かつお節を振って完成です。"],
+        stepsEn: ["Quickly blanch the kangkong in boiling water.", "Cool in cold water and squeeze out excess moisture.", "Toss with dashi, low-sodium soy sauce, and ginger, and top with bonito flakes."]
+      },
+      {
+        id: "d_jp_bangus_teriyaki",
+        name: "Bangus Teriyaki",
+        nameJa: "バングス（魚）の減塩照り焼き風",
+        mealType: "dinner",
+        mgLevel: "med",
+        tags: ["japanese", "easy"],
+        avoidTags: ["fish"],
+        ingredients: [
+          { item: "Bangus (骨抜き開き)", qty: "1尾", itemEn: "Bangus (boneless, butterflied)", qtyEn: "1 pc", cat: "fish" },
+          { item: "減塩醤油・みりん・砂糖少々", qty: "適量", itemEn: "Low-sodium soy sauce, mirin & a little sugar", qtyEn: "as needed", cat: "dry" },
+          { item: "生姜", qty: "1片", itemEn: "Ginger", qtyEn: "1 knob", cat: "produce" }
+        ],
+        tip: "甘辛いタレを控えめに絡め、香ばしく焼き上げます。塩焼きとは違う日の気分転換に。",
+        tipEn: "Lightly glazed with a mild sweet-savory sauce and grilled until fragrant — a change of pace from the salt-grilled version.",
+        steps: ["バングスに軽く小麦粉をはたきます。", "フライパンで両面を焼きます。", "減塩醤油・みりん・砂糖少々のタレを絡めて仕上げます。"],
+        stepsEn: ["Lightly dust the bangus with flour.", "Pan-fry both sides until cooked through.", "Glaze with a sauce of low-sodium soy sauce, mirin, and a little sugar."]
+      },
+      {
+        id: "d_jp_monggo_sumashi",
+        name: "Japanese-Style Monggo Soup",
+        nameJa: "緑豆とモリンガの和風すましスープ",
+        mealType: "dinner",
+        mgLevel: "high",
+        tags: ["japanese", "mg", "soup", "soft", "low_sodium"],
+        avoidTags: [],
+        ingredients: [
+          { item: "Monggo (緑豆)", qty: "1/3カップ", itemEn: "Monggo (mung beans)", qtyEn: "1/3 cup", cat: "dry" },
+          { item: "Malunggay (モリンガ葉)", qty: "1束", itemEn: "Malunggay leaves", qtyEn: "1 bunch", cat: "produce" },
+          { item: "出汁", qty: "500ml", itemEn: "Dashi stock", qtyEn: "500ml", cat: "dry" },
+          { item: "薄口醤油・塩", qty: "少々", itemEn: "Light soy sauce & salt", qtyEn: "a little", cat: "dry" }
+        ],
+        tip: "出汁ベースの澄んだスープに仕立て、緑豆とモリンガでマグネシウムを補給します。",
+        tipEn: "A clear dashi-based soup — mung beans and malunggay add a gentle magnesium boost.",
+        steps: ["緑豆を柔らかくなるまで下茹でします。", "出汁を鍋で温め、緑豆とモリンガ葉を加えます。", "薄口醤油・塩で味を調え、澄んだスープに仕上げます。"],
+        stepsEn: ["Pre-boil the mung beans until soft.", "Warm the dashi in a pot and add the mung beans and malunggay leaves.", "Season with light soy sauce and salt for a clear, delicate soup."]
+      }
+    ];
+
+    const DAYS_CONFIG = [
+      { key: "mon", label: "月曜日", short: "月", labelEn: "Monday", shortEn: "Mon" },
+      { key: "tue", label: "火曜日", short: "火", labelEn: "Tuesday", shortEn: "Tue" },
+      { key: "wed", label: "水曜日", short: "水", labelEn: "Wednesday", shortEn: "Wed" },
+      { key: "thu", label: "木曜日", short: "木", labelEn: "Thursday", shortEn: "Thu" },
+      { key: "fri", label: "金曜日", short: "金", labelEn: "Friday", shortEn: "Fri" },
+      { key: "sat", label: "土曜日", short: "土", labelEn: "Saturday", shortEn: "Sat" },
+      { key: "sun", label: "日曜日", short: "日", labelEn: "Sunday", shortEn: "Sun" },
+    ];
+
+    const CATEGORY_NAMES = {
+      produce: { ja: "青果（野菜・果物）", en: "Produce (Vegetables & Fruit)" },
+      meat: { ja: "精肉", en: "Meat" },
+      fish: { ja: "鮮魚・魚介", en: "Fish & Seafood" },
+      tofu_egg: { ja: "豆腐・卵", en: "Tofu & Eggs" },
+      dry: { ja: "乾物・豆・調味料", en: "Dry Goods, Beans & Seasoning" },
+      bakery: { ja: "主食・パン", en: "Bread & Staples" },
+      dairy: { ja: "乳製品", en: "Dairy" }
+    };
+
+    // ==========================================
+    // 2b. UI TEXT / i18n (JA / EN)
+    // ==========================================
+    const UI_STRINGS = {
+      ja: {
+        appSubtitle: "生活献立帳",
+        tagline: "マニラ・ローカル食材で整える健康食",
+        bulkGenerate: "一括生成",
+        changeConditions: "条件変更",
+        mgProgressLabel: "今週のマグネシウム補給達成度",
+        navPlan: "週間献立",
+        navShopping: "買い物帳",
+        navRecipes: "料理帳",
+        navSettings: "条件設定",
+        shoppingTitle: "パレンケ・スーパー買い出し帳",
+        shoppingSubtitle: "1週間の献立から食材を自動集計します",
+        resetBtn: "リセット",
+        filterAll: "すべて",
+        filterMg: "Mg高含有",
+        filterBreakfast: "朝食",
+        filterLunch: "昼食",
+        filterDinner: "夕食",
+        settingsTitle: "献立の条件・健康設定",
+        settingsSubtitle: "設定条件に合わせて「一括生成」が動作します",
+        ageLabel: "年代",
+        age60: "60代（消化・活力）",
+        age70: "70代（減塩・柔らかめ・ミネラル補給）",
+        age80: "80代（高消化・小分け・滋養）",
+        ageGeneral: "一般",
+        conditionsLabel: "重点ケア項目（複数選択可）",
+        condLowSodiumTitle: "減塩ケア（出汁・生姜風味）",
+        condLowSodiumDesc: "パティスや塩分を控えめに調整します",
+        condMgTitle: "マグネシウム積極補給",
+        condMgDesc: "モリンガ、緑豆、カカオ、豆腐を優先します",
+        condLowOilTitle: "胃腸・脂質ケア（低油分）",
+        condLowOilDesc: "蒸し物・スープ・煮込み料理を優先します",
+        condLowPurineTitle: "プリン体ケア",
+        condLowPurineDesc: "甲殻類・過度な肉類を控えます",
+        condJapaneseTitle: "たまに日本の味も楽しむ",
+        condJapaneseDesc: "卵焼きや親子丼など和食メニューを時々織り交ぜます",
+        avoidLabel: "除外したい食材",
+        avoidAmpalaya: "ゴーヤ",
+        avoidShellfish: "エビ・甲殻類",
+        avoidPork: "豚肉",
+        avoidFish: "魚介",
+        avoidSpicy: "激辛・唐辛子",
+        saveBtn: "設定を反映して再編成します",
+        modalSelectDish: "料理を選択してください",
+        modalAll: "すべて",
+        modalMg: "Mg高含有",
+        modalSoup: "汁物",
+        modalEasy: "手軽",
+        ingredientsLabel: "材料",
+        viewSteps: "作り方を見る",
+        hideSteps: "作り方を閉じる",
+        mealBreakfastFull: "朝食",
+        mealLunchFull: "昼食",
+        mealDinnerFull: "夕食"
+      },
+      en: {
+        appSubtitle: "Meal Planner",
+        tagline: "Healthy meals from local Manila ingredients",
+        bulkGenerate: "Auto-Generate",
+        changeConditions: "Edit Settings",
+        mgProgressLabel: "This Week's Magnesium Goal",
+        navPlan: "Weekly Plan",
+        navShopping: "Shopping List",
+        navRecipes: "Recipes",
+        navSettings: "Settings",
+        shoppingTitle: "Market & Grocery List",
+        shoppingSubtitle: "Auto-totaled from this week's meal plan",
+        resetBtn: "Reset",
+        filterAll: "All",
+        filterMg: "High Mg",
+        filterBreakfast: "Breakfast",
+        filterLunch: "Lunch",
+        filterDinner: "Dinner",
+        settingsTitle: "Meal Plan & Health Settings",
+        settingsSubtitle: "\"Auto-Generate\" uses these settings",
+        ageLabel: "Age Group",
+        age60: "60s (Digestion & Energy)",
+        age70: "70s (Low Sodium, Soft, Minerals)",
+        age80: "80s (Easy Digestion, Small Portions)",
+        ageGeneral: "General",
+        conditionsLabel: "Health Priorities (choose any)",
+        condLowSodiumTitle: "Low-Sodium Care (broth & ginger flavor)",
+        condLowSodiumDesc: "Reduces patis and salt in recipes",
+        condMgTitle: "Extra Magnesium Boost",
+        condMgDesc: "Prioritizes malunggay, mung beans, cacao, tofu",
+        condLowOilTitle: "Gentle on Stomach (low oil)",
+        condLowOilDesc: "Prioritizes steamed, soup, and simmered dishes",
+        condLowPurineTitle: "Low-Purine Care",
+        condLowPurineDesc: "Limits shellfish and heavy meat portions",
+        condJapaneseTitle: "Occasional Japanese Comfort Food",
+        condJapaneseDesc: "Mixes in dishes like tamagoyaki or oyakodon now and then",
+        avoidLabel: "Ingredients to Avoid",
+        avoidAmpalaya: "Bitter melon (Ampalaya)",
+        avoidShellfish: "Shrimp & shellfish",
+        avoidPork: "Pork",
+        avoidFish: "Fish & seafood",
+        avoidSpicy: "Very spicy / chili",
+        saveBtn: "Save & Regenerate Plan",
+        modalSelectDish: "Please choose a dish",
+        modalAll: "All",
+        modalMg: "High Mg",
+        modalSoup: "Soup",
+        modalEasy: "Easy",
+        ingredientsLabel: "Ingredients",
+        viewSteps: "View Steps",
+        hideSteps: "Hide Steps",
+        mealBreakfastFull: "Breakfast",
+        mealLunchFull: "Lunch",
+        mealDinnerFull: "Dinner"
+      }
+    };
+
+    const AGE_BADGE = {
+      ja: { "60s": "60代", "70s": "70代", "80s": "80代", general: "一般" },
+      en: { "60s": "60s", "70s": "70s", "80s": "80s", general: "General" }
+    };
+    const AVOID_BADGE = {
+      ja: { ampalaya: "ゴーヤ除外", shellfish: "甲殻類除外", pork: "豚肉除外", fish: "魚介除外", spicy: "辛味除外" },
+      en: { ampalaya: "No bitter melon", shellfish: "No shellfish", pork: "No pork", fish: "No fish", spicy: "No spicy" }
+    };
+    const COND_BADGE = {
+      ja: { lowSodium: "減塩", mgBoost: "Mg補給", lowOil: "低脂質", lowPurine: "低プリン体" },
+      en: { lowSodium: "Low-Sodium", mgBoost: "Mg Boost", lowOil: "Low-Oil", lowPurine: "Low-Purine" }
+    };
+    const MEAL_LABEL_SHORT = {
+      ja: { breakfast: "朝", lunch: "昼", dinner: "夜" },
+      en: { breakfast: "Br", lunch: "Lu", dinner: "Di" }
+    };
+    const STATUS_LABEL = {
+      ja: { mg: "Mg充実", standard: "標準食" },
+      en: { mg: "Mg-Rich", standard: "Standard" }
+    };
+
+    const DEFAULT_PROFILE = {
+      age: "70s",
+      conditions: { lowSodium: true, mgBoost: true, lowPurine: false, lowOil: true, japaneseTreat: true },
+      avoid: ["spicy"]
+    };
+
+    const DEFAULT_SCHEDULE = {
+      mon: { breakfast: "d_pandesal_egg", lunch: "d_sayote_gisado", dinner: "d_monggo" },
+      tue: { breakfast: "d_tsokolate", lunch: "d_sotanghon_gisado", dinner: "d_kangkong_garlic" },
+      wed: { breakfast: "d_oatmeal_goma", lunch: "d_tinola", dinner: "d_tortang_talong" },
+      thu: { breakfast: "d_arroz_caldo", lunch: "d_tofu_mushroom_ankake", dinner: "d_paksiw_fish" },
+      fri: { breakfast: "d_tsokolate", lunch: "d_sotanghon_gisado", dinner: "d_monggo" },
+      sat: { breakfast: "d_oatmeal_goma", lunch: "d_tinola", dinner: "d_kangkong_garlic" },
+      sun: { breakfast: "d_pandesal_egg", lunch: "d_tofu_mushroom_ankake", dinner: "d_bangus_grilled" }
+    };
+
+    let profile = JSON.parse(localStorage.getItem("kusina_banana_profile")) || DEFAULT_PROFILE;
+    let schedule = JSON.parse(localStorage.getItem("kusina_banana_sched")) || DEFAULT_SCHEDULE;
+    let checkedIngredients = JSON.parse(localStorage.getItem("kusina_banana_checks")) || {};
+    let activeModalContext = null;
+    let langMode = localStorage.getItem("kusina_banana_lang") || "ja";
+    let currentRecipeFilter = "all";
+    let currentModalFilter = "all";
+
+    // ==========================================
+    // 2c. LANGUAGE TOGGLE
+    // ==========================================
+    function t(key) {
+      return (UI_STRINGS[langMode] && UI_STRINGS[langMode][key]) || (UI_STRINGS.ja && UI_STRINGS.ja[key]) || key;
+    }
+
+    function applyI18n() {
+      document.querySelectorAll("[data-i18n]").forEach(el => {
+        el.textContent = t(el.getAttribute("data-i18n"));
+      });
+      document.documentElement.lang = langMode;
+      const label = document.getElementById("lang-toggle-label");
+      if (label) label.textContent = langMode === "ja" ? "English" : "日本語";
+    }
+
+    function toggleLang() {
+      langMode = langMode === "ja" ? "en" : "ja";
+      localStorage.setItem("kusina_banana_lang", langMode);
+      applyI18n();
+      updateProfileBadges();
+      renderWeeklyPlan();
+      renderShoppingList();
+      if (!document.getElementById("tab-recipes").classList.contains("hidden")) {
+        renderRecipeMasterList(currentRecipeFilter);
+      }
+      if (activeModalContext) {
+        updateModalTitle();
+        renderModalList(currentModalFilter);
+      }
+    }
+
+    // ==========================================
+    // 3. LOGIC & RENDER
+    // ==========================================
+    function saveProfileSettings() {
+      profile.age = document.getElementById("setting-age").value;
+      profile.conditions = {
+        lowSodium: document.getElementById("cond-low-sodium").checked,
+        mgBoost: document.getElementById("cond-mg-boost").checked,
+        lowOil: document.getElementById("cond-low-oil").checked,
+        lowPurine: document.getElementById("cond-low-purine").checked,
+        japaneseTreat: document.getElementById("cond-japanese-treat").checked,
+      };
+
+      const avoids = [];
+      document.querySelectorAll(".avoid-checkbox:checked").forEach(cb => avoids.push(cb.value));
+      profile.avoid = avoids;
+
+      localStorage.setItem("kusina_banana_profile", JSON.stringify(profile));
+      updateProfileBadges();
+    }
+
+    function loadProfileToUI() {
+      if (document.getElementById("setting-age")) {
+        document.getElementById("setting-age").value = profile.age || "70s";
+      }
+      if (profile.conditions) {
+        document.getElementById("cond-low-sodium").checked = !!profile.conditions.lowSodium;
+        document.getElementById("cond-mg-boost").checked = !!profile.conditions.mgBoost;
+        document.getElementById("cond-low-oil").checked = !!profile.conditions.lowOil;
+        document.getElementById("cond-low-purine").checked = !!profile.conditions.lowPurine;
+        document.getElementById("cond-japanese-treat").checked = profile.conditions.japaneseTreat !== false;
+      }
+      document.querySelectorAll(".avoid-checkbox").forEach(cb => {
+        cb.checked = profile.avoid && profile.avoid.includes(cb.value);
+      });
+      updateProfileBadges();
+    }
+
+    function updateProfileBadges() {
+      document.getElementById("badge-age").textContent = AGE_BADGE[langMode][profile.age] || AGE_BADGE[langMode]["70s"];
+
+      const condList = [];
+      if (profile.conditions.lowSodium) condList.push(COND_BADGE[langMode].lowSodium);
+      if (profile.conditions.mgBoost) condList.push(COND_BADGE[langMode].mgBoost);
+      if (profile.conditions.lowOil) condList.push(COND_BADGE[langMode].lowOil);
+      if (profile.conditions.lowPurine) condList.push(COND_BADGE[langMode].lowPurine);
+
+      const basicLabel = langMode === "en" ? "Basic Diet" : "基本食";
+      document.getElementById("badge-conditions").textContent = condList.slice(0, 2).join(langMode === "en" ? " / " : "・") || basicLabel;
+
+      const avoidsTxt = (profile.avoid || []).map(a => AVOID_BADGE[langMode][a] || a).join(", ");
+      const defaultText = langMode === "en" ? "Optimizing to your settings" : "設定条件に合わせて最適化中";
+      document.getElementById("summary-avoid-text").innerHTML = avoidsTxt
+        ? `<i data-lucide="ban" class="w-3 h-3 text-[#8C6A1D]"></i><span>${avoidsTxt}${langMode === "en" ? " excluded" : "で自動編成中"}</span>`
+        : `<i data-lucide="sliders-horizontal" class="w-3 h-3 text-[#8C6A1D]"></i><span>${defaultText}</span>`;
+      safeCreateIcons();
+    }
+
+    function applySettingsAndGenerate() {
+      saveProfileSettings();
+      randomizeAll();
+      switchTab('plan');
+    }
+
+    function getValidDishes(mealType) {
+      return DISHES.filter(d => {
+        if (d.mealType !== mealType) return false;
+        if (d.tags.includes('japanese') && !(profile.conditions && profile.conditions.japaneseTreat)) return false;
+        if (profile.avoid && profile.avoid.some(tag => d.avoidTags.includes(tag))) return false;
+        if (profile.conditions.lowPurine && (d.avoidTags.includes('shellfish') || d.avoidTags.includes('pork'))) return false;
+        return true;
+      });
+    }
+
+    function randomizeAll() {
+      DAYS_CONFIG.forEach(d => {
+        let breakfasts = getValidDishes("breakfast");
+        let lunches = getValidDishes("lunch");
+        let dinners = getValidDishes("dinner");
+
+        if (breakfasts.length === 0) breakfasts = DISHES.filter(x => x.mealType === "breakfast");
+        if (lunches.length === 0) lunches = DISHES.filter(x => x.mealType === "lunch");
+        if (dinners.length === 0) dinners = DISHES.filter(x => x.mealType === "dinner");
+
+        if (profile.conditions.mgBoost) {
+          const highDin = dinners.filter(x => x.mgLevel === "high");
+          const highBf = breakfasts.filter(x => x.mgLevel === "high");
+
+          schedule[d.key] = {
+            breakfast: (highBf.length > 0 && Math.random() > 0.4) ? highBf[Math.floor(Math.random() * highBf.length)].id : breakfasts[Math.floor(Math.random() * breakfasts.length)].id,
+            lunch: lunches[Math.floor(Math.random() * lunches.length)].id,
+            dinner: (highDin.length > 0 && Math.random() > 0.3) ? highDin[Math.floor(Math.random() * highDin.length)].id : dinners[Math.floor(Math.random() * dinners.length)].id,
+          };
+        } else {
+          schedule[d.key] = {
+            breakfast: breakfasts[Math.floor(Math.random() * breakfasts.length)].id,
+            lunch: lunches[Math.floor(Math.random() * lunches.length)].id,
+            dinner: dinners[Math.floor(Math.random() * dinners.length)].id,
+          };
+        }
+      });
+      saveSchedule();
+    }
+
+    function saveSchedule() {
+      localStorage.setItem("kusina_banana_sched", JSON.stringify(schedule));
+      renderWeeklyPlan();
+      renderShoppingList();
+    }
+
+    function getDish(id) {
+      return DISHES.find(d => d.id === id) || DISHES[0];
+    }
+
+    function renderMealRow(dayKey, mealType, dish, mealLabel) {
+      const primary = langMode === "en" ? dish.name : dish.nameJa;
+      const secondary = langMode === "en" ? dish.nameJa : dish.name;
+      return `
+        <div onclick="playAudioTone(); openModal('${dayKey}', '${mealType}')" class="flex items-center justify-between p-2 rounded-lg card-deep cursor-pointer hover:border-[#E0B23A] transition">
+          <div class="flex items-center space-x-2">
+            <span class="font-mincho font-bold text-[11px] text-[#8C6A1D]">${mealLabel}</span>
+            <div>
+              <div class="font-bold text-[#2B2926] text-xs">${primary}</div>
+              <div class="text-[10px] text-[#2B2926]/60">${secondary}</div>
+            </div>
+          </div>
+          ${dish.mgLevel === 'high' ? '<span class="chip-accent text-[9px] font-bold px-1 rounded">Mg</span>' : '<i data-lucide="chevron-right" class="w-3.5 h-3.5 text-[#C9C2B4]"></i>'}
+        </div>
+      `;
+    }
+
+    function renderWeeklyPlan() {
+      const container = document.getElementById("days-container");
+      container.innerHTML = "";
+      let highMgDays = 0;
+      const mealShort = MEAL_LABEL_SHORT[langMode];
+
+      DAYS_CONFIG.forEach(d => {
+        const dayPlan = schedule[d.key];
+        const bf = getDish(dayPlan.breakfast);
+        const lu = getDish(dayPlan.lunch);
+        const di = getDish(dayPlan.dinner);
+
+        const hasMg = [bf, lu, di].some(dish => dish.mgLevel === "high");
+        if (hasMg) highMgDays++;
+
+        const dayLabel = langMode === "en" ? d.labelEn : d.label;
+        const dayShort = langMode === "en" ? d.shortEn : d.short;
+        const statusLabel = hasMg ? STATUS_LABEL[langMode].mg : STATUS_LABEL[langMode].standard;
+
+        const card = document.createElement("div");
+        card.className = "card-base rounded-xl p-3 shadow-xs space-y-2";
+        card.innerHTML = `
+          <div class="flex items-center justify-between border-b border-[#DDD6C6] pb-1.5">
+            <div class="flex items-center space-x-2">
+              <span class="font-mincho font-bold text-xs bg-[#E4DECE] text-[#2B2926] px-2 py-0.5 rounded">${dayShort}</span>
+              <span class="font-mincho font-bold text-xs text-[#2B2926]">${dayLabel}</span>
+            </div>
+            ${hasMg
+              ? `<span class="font-mincho text-[10px] text-[#8C6A1D] border border-[#E0B23A] bg-[#FAF8F5] px-1.5 py-0.5 rounded">${statusLabel}</span>`
+              : `<span class="text-[10px] text-[#C9C2B4]">${statusLabel}</span>`}
+          </div>
+
+          <div class="space-y-1 text-xs">
+            ${renderMealRow(d.key, 'breakfast', bf, mealShort.breakfast)}
+            ${renderMealRow(d.key, 'lunch', lu, mealShort.lunch)}
+            ${renderMealRow(d.key, 'dinner', di, mealShort.dinner)}
+          </div>
+        `;
+        container.appendChild(card);
+      });
+
+      const ratioLabel = langMode === "en" ? `${highMgDays} / 7 days met` : `${highMgDays} / 7 日達成`;
+      document.getElementById("mg-ratio-text").textContent = ratioLabel;
+      document.getElementById("mg-progress-bar").style.width = `${(highMgDays / 7) * 100}%`;
+      safeCreateIcons();
+    }
+
+    function renderShoppingList() {
+      const container = document.getElementById("shopping-list-content");
+      container.innerHTML = "";
+
+      // Aggregation key is always the Japanese ingredient name so the
+      // checked/unchecked state survives switching languages.
+      const aggregated = {};
+      DAYS_CONFIG.forEach(d => {
+        const plan = schedule[d.key];
+        ['breakfast', 'lunch', 'dinner'].forEach(m => {
+          const dish = getDish(plan[m]);
+          dish.ingredients.forEach(ing => {
+            const cat = ing.cat || 'dry';
+            const key = ing.item;
+            if (!aggregated[cat]) aggregated[cat] = {};
+            if (!aggregated[cat][key]) aggregated[cat][key] = { count: 0, itemEn: ing.itemEn || ing.item };
+            aggregated[cat][key].count += 1;
+          });
+        });
+      });
+
+      Object.keys(CATEGORY_NAMES).forEach(catKey => {
+        if (!aggregated[catKey] || Object.keys(aggregated[catKey]).length === 0) return;
+
+        const box = document.createElement("div");
+        box.className = "space-y-1";
+
+        let html = "";
+        Object.keys(aggregated[catKey]).forEach(itemKey => {
+          const data = aggregated[catKey][itemKey];
+          const count = data.count;
+          const isChecked = !!checkedIngredients[itemKey];
+          const countLabel = langMode === "en" ? `x${count}` : `${count}回分`;
+          const displayName = langMode === "en" ? data.itemEn : itemKey;
+          const safeKey = itemKey.replace(/'/g, "\\'");
+
+          html += `
+            <label class="flex items-center justify-between p-2 rounded-lg card-deep cursor-pointer text-xs select-none">
+              <div class="flex items-center space-x-2.5">
+                <input type="checkbox" onchange="playAudioTone(); toggleCheckItem('${safeKey}')" ${isChecked ? 'checked' : ''} 
+                  class="w-4 h-4 rounded text-[#E0B23A] focus:ring-0">
+                <span class="${isChecked ? 'line-through text-[#C9C2B4]' : 'text-[#2B2926] font-medium'}">${displayName}</span>
+              </div>
+              <span class="font-mincho text-[10px] text-[#8C6A1D] px-1.5 py-0.5 rounded border border-[#DDD6C6] bg-[#FAF8F5]">${countLabel}</span>
+            </label>
+          `;
+        });
+
+        box.innerHTML = `
+          <h3 class="font-mincho font-bold text-xs text-[#2B2926] mt-2 mb-1">${CATEGORY_NAMES[catKey][langMode]}</h3>
+          <div class="space-y-1">${html}</div>
+        `;
+        container.appendChild(box);
+      });
+      safeCreateIcons();
+    }
+
+    function toggleCheckItem(key) {
+      checkedIngredients[key] = !checkedIngredients[key];
+      localStorage.setItem("kusina_banana_checks", JSON.stringify(checkedIngredients));
+      renderShoppingList();
+    }
+
+    function clearCheckedItems() {
+      checkedIngredients = {};
+      localStorage.setItem("kusina_banana_checks", JSON.stringify(checkedIngredients));
+      renderShoppingList();
+    }
+
+    function renderRecipeMasterList(filter = "all") {
+      currentRecipeFilter = filter;
+      const container = document.getElementById("recipe-master-list");
+      container.innerHTML = "";
+
+      let list = DISHES;
+      if (filter === "mg") list = DISHES.filter(d => d.mgLevel === "high");
+      if (["breakfast", "lunch", "dinner"].includes(filter)) list = DISHES.filter(d => d.mealType === filter);
+
+      const mealShort = MEAL_LABEL_SHORT[langMode];
+
+      list.forEach(dish => {
+        const primary = langMode === "en" ? dish.name : dish.nameJa;
+        const secondary = langMode === "en" ? dish.nameJa : dish.name;
+        const tip = langMode === "en" ? (dish.tipEn || dish.tip) : dish.tip;
+        const ingredientsText = dish.ingredients.map(i => langMode === "en" ? (i.itemEn || i.item) : i.item).join(', ');
+        const mealLabel = dish.mealType === 'breakfast' ? mealShort.breakfast : dish.mealType === 'lunch' ? mealShort.lunch : mealShort.dinner;
+        const jpBadge = langMode === "en" ? "JP" : "和食";
+        const stepsList = langMode === "en" ? (dish.stepsEn || dish.steps) : dish.steps;
+        const hasSteps = stepsList && stepsList.length > 0;
+        const stepsHtml = hasSteps
+          ? `<ol class="hidden list-decimal list-inside space-y-1 text-[10px] text-[#2B2926]/80 pl-1" id="steps-${dish.id}">${stepsList.map(s => `<li>${s}</li>`).join('')}</ol>`
+          : '';
+        const toggleBtn = hasSteps
+          ? `<button onclick="playAudioTone(); toggleRecipeSteps('${dish.id}')" class="text-[10px] font-mincho font-bold text-[#8C6A1D] underline" id="steps-toggle-${dish.id}">${t('viewSteps')}</button>`
+          : '';
+
+        const card = document.createElement("div");
+        card.className = "card-base p-3 rounded-xl space-y-1.5 shadow-xs";
+        card.innerHTML = `
+          <div class="flex items-start justify-between">
+            <div>
+              <div class="flex items-center space-x-1.5">
+                <span class="font-mincho font-bold text-xs text-[#2B2926]">${primary}</span>
+                ${dish.mgLevel === 'high' ? `<span class="chip-accent text-[9px] font-bold px-1 rounded">${t('filterMg')}</span>` : ''}
+                ${dish.tags.includes('japanese') ? `<span class="text-[9px] text-[#8C6A1D] bg-[#E4DECE] px-1 rounded">${jpBadge}</span>` : ''}
+              </div>
+              <p class="text-[10px] text-[#2B2926]/60">${secondary}</p>
+            </div>
+            <span class="font-mincho text-[10px] bg-[#E4DECE] text-[#2B2926] px-1.5 py-0.5 rounded">${mealLabel}</span>
+          </div>
+          <p class="text-[11px] text-[#2B2926]/80 card-deep p-2 rounded-lg">${tip}</p>
+          <div class="text-[10px] text-[#2B2926]/70">
+            <span class="font-bold">${t('ingredientsLabel')}:</span> ${ingredientsText}
+          </div>
+          ${toggleBtn}
+          ${stepsHtml}
+        `;
+        container.appendChild(card);
+      });
+    }
+
+    function toggleRecipeSteps(dishId) {
+      const list = document.getElementById('steps-' + dishId);
+      const btn = document.getElementById('steps-toggle-' + dishId);
+      if (!list || !btn) return;
+      const isHidden = list.classList.contains('hidden');
+      list.classList.toggle('hidden');
+      btn.textContent = isHidden ? t('hideSteps') : t('viewSteps');
+    }
+
+    // Modal
+    function openModal(dayKey, mealType) {
+      activeModalContext = { dayKey, mealType };
+      currentModalFilter = 'all';
+      updateModalTitle();
+      document.getElementById("dish-modal").classList.remove("hidden");
+      renderModalList('all');
+      safeCreateIcons();
+    }
+
+    function updateModalTitle() {
+      if (!activeModalContext) return;
+      const dConfig = DAYS_CONFIG.find(d => d.key === activeModalContext.dayKey);
+      const mealKey = activeModalContext.mealType === 'breakfast' ? 'mealBreakfastFull' : activeModalContext.mealType === 'lunch' ? 'mealLunchFull' : 'mealDinnerFull';
+      const mealLabel = t(mealKey);
+      const dayLabel = langMode === "en" ? dConfig.labelEn : dConfig.label;
+      document.getElementById("modal-title").textContent = langMode === "en"
+        ? `Change ${dayLabel}'s ${mealLabel}`
+        : `${dayLabel}の${mealLabel}を変更します`;
+    }
+
+    function closeModal() {
+      document.getElementById("dish-modal").classList.add("hidden");
+      activeModalContext = null;
+    }
+
+    function renderModalList(tag) {
+      currentModalFilter = tag;
+      const container = document.getElementById("modal-dish-list");
+      container.innerHTML = "";
+
+      let list = DISHES.filter(d => d.mealType === activeModalContext.mealType);
+      if (tag === "mg") list = list.filter(d => d.mgLevel === "high");
+      if (tag === "soup") list = list.filter(d => d.tags.includes("soup"));
+      if (tag === "easy") list = list.filter(d => d.tags.includes("easy"));
+
+      const current = schedule[activeModalContext.dayKey][activeModalContext.mealType];
+      const avoidLabel = langMode === "en" ? "Excluded" : "除外設定中";
+
+      list.forEach(dish => {
+        const isSel = dish.id === current;
+        const isAvoid = dish.avoidTags.some(tag2 => (profile.avoid || []).includes(tag2));
+        const primary = langMode === "en" ? dish.name : dish.nameJa;
+        const secondary = langMode === "en" ? dish.nameJa : dish.name;
+
+        const item = document.createElement("div");
+        item.onclick = () => { playAudioTone(); selectDish(dish.id); };
+        item.className = `p-2.5 rounded-xl border cursor-pointer transition flex items-center justify-between ${
+          isSel ? 'border-[#E0B23A] bg-[#EFEAE0]' : 'border-[#DDD6C6] bg-white hover:bg-[#FAF8F5]'
+        }`;
+
+        item.innerHTML = `
+          <div>
+            <div class="flex items-center space-x-1.5">
+              <span class="font-mincho font-bold text-xs text-[#2B2926]">${primary}</span>
+              ${dish.mgLevel === 'high' ? '<span class="chip-accent text-[9px] font-bold px-1 rounded">Mg</span>' : ''}
+              ${isAvoid ? `<span class="text-[9px] text-[#8C6A1D] bg-[#E4DECE] px-1 rounded">${avoidLabel}</span>` : ''}
+            </div>
+            <div class="text-[10px] text-[#2B2926]/60">${secondary}</div>
+          </div>
+          ${isSel ? '<i data-lucide="check" class="w-4 h-4 text-[#8C6A1D]"></i>' : ''}
+        `;
+        container.appendChild(item);
+      });
+      safeCreateIcons();
+    }
+
+    function filterModalDishes(tag) {
+      document.querySelectorAll(".modal-tag-btn").forEach(btn => {
+        if (btn.getAttribute("data-tag") === tag) {
+          btn.className = "modal-tag-btn px-2.5 py-1 rounded-md bg-[#E0B23A] text-[#2B2926] font-mincho font-bold text-[11px]";
+        } else {
+          btn.className = "modal-tag-btn px-2.5 py-1 rounded-md card-base text-[#2B2926] font-mincho text-[11px]";
+        }
+      });
+      renderModalList(tag);
+    }
+
+    function selectDish(dishId) {
+      if (!activeModalContext) return;
+      schedule[activeModalContext.dayKey][activeModalContext.mealType] = dishId;
+      saveSchedule();
+      closeModal();
+    }
+
+    // Tabs
+    function switchTab(tabKey) {
+      ['plan', 'shopping', 'recipes', 'settings'].forEach(key => {
+        document.getElementById(`tab-${key}`).classList.add("hidden");
+        const btn = document.getElementById(`nav-${key}`);
+        if (btn) btn.className = "tab-item flex flex-col items-center gap-0.5 px-3 py-1 transition";
+      });
+
+      document.getElementById(`tab-${tabKey}`).classList.remove("hidden");
+      const activeNav = document.getElementById(`nav-${tabKey}`);
+      if (activeNav) activeNav.className = "tab-item active flex flex-col items-center gap-0.5 px-3 py-1 transition";
+
+      if (tabKey === "recipes") renderRecipeMasterList("all");
+    }
+
+    function filterRecipeList(filter) {
+      document.querySelectorAll(".recipe-filter-btn").forEach(btn => {
+        if (btn.getAttribute("data-filter") === filter) {
+          btn.className = "recipe-filter-btn px-3 py-1 rounded-full font-mincho font-bold bg-[#E0B23A] text-[#2B2926]";
+        } else {
+          btn.className = "recipe-filter-btn px-3 py-1 rounded-full font-mincho card-base text-[#2B2926]";
+        }
+      });
+      renderRecipeMasterList(filter);
+    }
+
+    // PWA Init (wrapped in try/catch: some preview/sandbox environments block
+    // Blob URLs or Service Worker registration, and an uncaught error here
+    // would stop the rest of this script from running — including the
+    // DOMContentLoaded listener below that renders the meal plan.)
+    (function initPWA() {
+      try {
+        const manifest = {
+          name: "KusinaBalance — 生活献立帳",
+          short_name: "Kusina",
+          start_url: "./",
+          display: "standalone",
+          background_color: "#EFEAE0",
+          theme_color: "#EFEAE0",
+          icons: [
+            {
+              src: "data:image/png;base64,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",
+              sizes: "192x192",
+              type: "image/png"
+            },
+            {
+              src: "data:image/png;base64,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",
+              sizes: "512x512",
+              type: "image/png"
+            }
+          ]
+        };
+        const blob = new Blob([JSON.stringify(manifest)], { type: 'application/json' });
+        const link = document.createElement('link');
+        link.rel = 'manifest';
+        link.href = URL.createObjectURL(blob);
+        document.head.appendChild(link);
+      } catch (e) {
+        console.warn("KusinaBalance: manifest setup skipped", e);
+      }
+
+      try {
+        if ('serviceWorker' in navigator) {
+          const sw = `self.addEventListener('install', e => self.skipWaiting());
+                      self.addEventListener('activate', e => e.waitUntil(clients.claim()));
+                      self.addEventListener('fetch', e => e.respondWith(fetch(e.request).catch(() => caches.match(e.request))));`;
+          navigator.serviceWorker.register(URL.createObjectURL(new Blob([sw], { type: 'application/javascript' }))).catch(() => {});
+        }
+      } catch (e) {
+        console.warn("KusinaBalance: service worker registration skipped", e);
+      }
+    })();
+
+    // App init. Preview/sandbox environments can be inconsistent about
+    // exactly when this script runs relative to DOM/resource readiness,
+    // so we trigger initialization through several redundant paths and
+    // guard with a flag so it only actually runs once.
+    let appHasInitialized = false;
+    function initApp() {
+      if (appHasInitialized) return;
+      appHasInitialized = true;
+      loadProfileToUI();
+      applyI18n();
+      renderWeeklyPlan();
+      renderShoppingList();
+    }
+
+    if (document.readyState !== "loading") {
+      // DOM is already parsed by the time this script ran.
+      initApp();
+    }
+    document.addEventListener("DOMContentLoaded", initApp);
+    window.addEventListener("load", initApp);
+    // Last-resort safety net: if for any reason none of the above fired
+    // (or an earlier synchronous error elsewhere prevented them from being
+    // registered in time), check shortly after and initialize anyway.
+    setTimeout(initApp, 150);
+  </script>
+</body>
+</html>
