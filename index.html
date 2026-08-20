@@ -132,6 +132,9 @@
           <i data-lucide="languages" class="w-3.5 h-3.5"></i>
           <span class="font-mincho" id="lang-toggle-label">English</span>
         </button>
+        <button onclick="playAudioTone(); copyPlanToClipboard();" class="btn-ghost px-2.5 py-1.5 rounded-lg flex items-center justify-center active:scale-95 transition" title="Copy meal plan &amp; shopping list" aria-label="Copy meal plan and shopping list">
+          <i data-lucide="copy" class="w-3.5 h-3.5"></i>
+        </button>
         <button onclick="playAudioTone(); randomizeAll();" class="btn-ghost px-3 py-1.5 rounded-lg flex items-center space-x-1.5 text-xs active:scale-95 transition">
           <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
           <span class="font-mincho" data-i18n="bulkGenerate">一括生成</span>
@@ -393,6 +396,22 @@
         osc.start();
         osc.stop(audioCtx.currentTime + 0.12);
       } catch (e) {}
+    }
+
+    // Lightweight toast notification (avoids blocking alert() dialogs on
+    // mobile). Reuses a single element and fades it in/out.
+    function showToast(message) {
+      let toast = document.getElementById("kb-toast");
+      if (!toast) {
+        toast = document.createElement("div");
+        toast.id = "kb-toast";
+        toast.className = "fixed left-1/2 -translate-x-1/2 bottom-24 z-50 max-w-[85vw] text-center bg-[#2B2926] text-[#EFEAE0] text-xs font-mincho px-4 py-2.5 rounded-full shadow-lg opacity-0 pointer-events-none transition-opacity duration-300";
+        document.body.appendChild(toast);
+      }
+      toast.textContent = message;
+      toast.style.opacity = "1";
+      clearTimeout(toast._hideTimeout);
+      toast._hideTimeout = setTimeout(() => { toast.style.opacity = "0"; }, 2400);
     }
 
     // Safe wrapper: if the lucide CDN script is slow/blocked in a preview
@@ -1050,6 +1069,91 @@
       document.documentElement.lang = langMode;
       const label = document.getElementById("lang-toggle-label");
       if (label) label.textContent = langMode === "ja" ? "English" : "日本語";
+    }
+
+    // Builds a plain-text version of the week's meal plan + aggregated
+    // shopping list and copies it to the clipboard, so it can be pasted
+    // into Google Keep, Notes, Messenger, Viber, etc. Ingredient totals
+    // are aggregated the same way as the Shopping tab (stable JA key,
+    // translated display name) so the counts always match.
+    function buildPlanText() {
+      const mealLabels = langMode === "en"
+        ? { b: "Breakfast", l: "Lunch", d: "Dinner" }
+        : { b: "朝", l: "昼", d: "夜" };
+
+      let text = (langMode === "en"
+        ? "[This Week's Meal Plan — KusinaBalance]"
+        : "【今週の献立帳（KusinaBalance）】") + "\n\n";
+
+      DAYS_CONFIG.forEach(d => {
+        const dayPlan = schedule[d.key];
+        const bf = getDish(dayPlan.breakfast);
+        const lu = getDish(dayPlan.lunch);
+        const di = getDish(dayPlan.dinner);
+        const dayLabel = langMode === "en" ? d.labelEn : d.label;
+
+        text += `■ ${dayLabel}\n`;
+        text += `・${mealLabels.b}: ${langMode === "en" ? bf.name : bf.nameJa}\n`;
+        text += `・${mealLabels.l}: ${langMode === "en" ? lu.name : lu.nameJa}\n`;
+        text += `・${mealLabels.d}: ${langMode === "en" ? di.name : di.nameJa}\n\n`;
+      });
+
+      text += (langMode === "en" ? "[Market & Grocery List]" : "【パレンケ・買い出しリスト】") + "\n";
+
+      const aggregated = {};
+      DAYS_CONFIG.forEach(d => {
+        const plan = schedule[d.key];
+        ["breakfast", "lunch", "dinner"].forEach(m => {
+          const dish = getDish(plan[m]);
+          dish.ingredients.forEach(ing => {
+            const key = ing.item;
+            if (!aggregated[key]) aggregated[key] = { count: 0, itemEn: ing.itemEn || ing.item };
+            aggregated[key].count += 1;
+          });
+        });
+      });
+
+      Object.keys(aggregated).forEach(key => {
+        const data = aggregated[key];
+        const displayName = langMode === "en" ? data.itemEn : key;
+        const countLabel = langMode === "en" ? `x${data.count}` : `${data.count}回分`;
+        text += `[ ] ${displayName} (${countLabel})\n`;
+      });
+
+      return text;
+    }
+
+    function copyPlanToClipboard() {
+      const text = buildPlanText();
+      const successMsg = langMode === "en" ? "Copied to clipboard!" : "献立と買い出しリストをコピーしました";
+      const failMsg = langMode === "en" ? "Copy failed — please try again." : "コピーに失敗しました。もう一度お試しください。";
+
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text)
+          .then(() => showToast(successMsg))
+          .catch(() => legacyCopyFallback(text, successMsg, failMsg));
+      } else {
+        legacyCopyFallback(text, successMsg, failMsg);
+      }
+    }
+
+    // Fallback for browsers/webviews without the async Clipboard API.
+    function legacyCopyFallback(text, successMsg, failMsg) {
+      try {
+        const ta = document.createElement("textarea");
+        ta.value = text;
+        ta.style.position = "fixed";
+        ta.style.opacity = "0";
+        ta.style.pointerEvents = "none";
+        document.body.appendChild(ta);
+        ta.focus();
+        ta.select();
+        const ok = document.execCommand("copy");
+        document.body.removeChild(ta);
+        showToast(ok ? successMsg : failMsg);
+      } catch (e) {
+        showToast(failMsg);
+      }
     }
 
     function toggleLang() {
